@@ -6,13 +6,13 @@ import javafx.util.Pair;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-public class SUBSCRIBE implements Message {
+public class UNSUBSCRIBE implements Message {
     private String topic;
     private int id;
     private String userName;
     private ConnectionHandler handler;
     private DataBase dataBase;
-    public SUBSCRIBE(String topic, int id,String userName, ConnectionHandler handler) {
+    public UNSUBSCRIBE(String topic, int id,String userName, ConnectionHandler handler) {
         this.topic = topic;
         this.id = id;
         this.userName=userName;
@@ -22,8 +22,7 @@ public class SUBSCRIBE implements Message {
 
     @Override
     public void process() {
-        dataBase.getTopics().putIfAbsent(topic,new ConcurrentLinkedQueue<>());
-        dataBase.getTopics().get(topic).add(new Pair<>(userName,id));
-        new RECIEPT("joined club " +topic , id ,handler).process();
+        dataBase.getTopics().get(topic).remove(new Pair<>(userName,id));
+        new RECIEPT("Exited club " +topic , id ,handler).process();
     }
 }
