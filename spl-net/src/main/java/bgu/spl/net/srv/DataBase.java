@@ -10,8 +10,8 @@ public class DataBase {
     private static DataBase instance = new DataBase();
     private ConcurrentHashMap<String, String> usersPass; // user name , passcode
     private ConcurrentHashMap<Integer,String > activeUsers; // userId, user name
-    private ConcurrentHashMap<String,ConcurrentLinkedQueue<String>> topics;// topic, user name list
-    private ConcurrentHashMap<Integer,ConcurrentLinkedQueue<String>> clintesBooks;// user id, books list
+    private ConcurrentHashMap<String,ConcurrentLinkedQueue<Pair<String,Integer>>> topics;// topic, Pair<user name ,id> list
+    private ConcurrentHashMap<String,ConcurrentLinkedQueue<String>> clintesBooks;// user name, books list
 
     private DataBase(){
         usersPass = new ConcurrentHashMap<>();
@@ -30,19 +30,19 @@ public class DataBase {
     public ConcurrentHashMap<Integer, String> getActiveUsers() {
         return activeUsers;
     }
-    public ConcurrentHashMap<Integer, ConcurrentLinkedQueue<String>> getClintesBooks() {
+    public ConcurrentHashMap<String, ConcurrentLinkedQueue<String>> getClintesBooks() {
         return clintesBooks;
     }
 
-    public ConcurrentHashMap<String,ConcurrentLinkedQueue<String>> getTopics() {
+    public ConcurrentHashMap<String,ConcurrentLinkedQueue<Pair<String,Integer>>>  getTopics() {
         return topics;
     }
     public void removeUser(int connectionId){
         clintesBooks.remove(connectionId);
-        for(ConcurrentLinkedQueue<String> topic:topics.values())
-        {
-            topic.remove(connectionId);
-        }
+//        for(ConcurrentHashMap<String,ConcurrentLinkedQueue<Pair<String,Integer>>> topic:topics.values())TODO: LATER.....
+//        {
+//            topic.remove(connectionId);
+//        }
        usersPass.remove(activeUsers.get(connectionId));
         activeUsers.remove(connectionId);
     }
@@ -57,11 +57,11 @@ public class DataBase {
         this.activeUsers = usersId;
     }
 
-    public void setTopics(ConcurrentHashMap<String, ConcurrentLinkedQueue<String>> topics) {
+    public void setTopics(ConcurrentHashMap<String,ConcurrentLinkedQueue<Pair<String,Integer>>>  topics) {
         this.topics = topics;
     }
 
-    public void setClintesBooks(ConcurrentHashMap<Integer, ConcurrentLinkedQueue<String>> clintesBooks) {
+    public void setClintesBooks(ConcurrentHashMap<String, ConcurrentLinkedQueue<String>> clintesBooks) {
         this.clintesBooks = clintesBooks;
     }
 
