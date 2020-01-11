@@ -2,64 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b661f945-c916-4a76-9ec4-3fcb8be627a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Boost_Echo_Client/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Boost_Echo_Client/include/connectionHandler.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/connectionHandler.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/echoClient.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncoderDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessagingProtocol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/StompMessagingProtocol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/echo/EchoClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/echo/EchoProtocol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/echo/LineMessageEncoderDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/FetchNewsCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/NewsFeed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/NewsFeedClientMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/NewsFeedServerMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/PublishNewsCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/rci/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/rci/ObjectEncoderDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/rci/RCIClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/rci/RemoteCommandInvocationProtocol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/stomp/StompServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/ActorThreadPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/BaseServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/BlockingConnectionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/ConnectionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/Connections.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/ConnectionsImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/DataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/NonBlockingConnectionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/Reactor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/api/MessageEncoderDecoder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/api/MessagingProtocol.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/api/StompMessagingProtocol.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/echo/EchoClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/echo/EchoProtocol.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/echo/LineMessageEncoderDecoder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/newsfeed/FetchNewsCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/newsfeed/NewsFeed.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/newsfeed/NewsFeedClientMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/newsfeed/NewsFeedServerMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/newsfeed/PublishNewsCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/rci/Command.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/rci/ObjectEncoderDecoder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/rci/RCIClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/rci/RemoteCommandInvocationProtocol.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/stomp/StompServer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/ActorThreadPool.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/BaseServer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/BlockingConnectionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/ConnectionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/Connections.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/NonBlockingConnectionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/Reactor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/Server$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/DataBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +148,7 @@
       <workItem from="1576425958628" duration="620000" />
       <workItem from="1577718845591" duration="2901000" />
       <workItem from="1578415434255" duration="4164000" />
-      <workItem from="1578749751130" duration="1205000" />
+      <workItem from="1578749751130" duration="1762000" />
     </task>
     <task id="LOCAL-00001" summary="1st">
       <created>1578415564167</created>
@@ -220,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578419952965</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="232">
+      <created>1578750989943</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578750989943</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,10 +192,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="801" y="265" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1578750127698" />
-    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2" timestamp="1578419952483">
+    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2" timestamp="1578750987649">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1578419952483" />
+    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1578750987649" />
     <state width="1807" height="298" key="GridCell.Tab.0.bottom" timestamp="1578420321101">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -265,10 +216,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1578415547781" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1578419955458">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1578750991125">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1578419955458" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1578750991125" />
     <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578750975152">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
