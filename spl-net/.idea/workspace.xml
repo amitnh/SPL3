@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b661f945-c916-4a76-9ec4-3fcb8be627a4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Boost_Echo_Client/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Boost_Echo_Client/include/connectionHandler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/connectionHandler.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/echoClient.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncoderDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessagingProtocol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/StompMessagingProtocol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/echo/EchoClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/echo/EchoProtocol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/echo/LineMessageEncoderDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/FetchNewsCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/NewsFeed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/NewsFeedClientMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/NewsFeedServerMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/PublishNewsCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/rci/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/rci/ObjectEncoderDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/rci/RCIClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/rci/RemoteCommandInvocationProtocol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/stomp/StompServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/ActorThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/BaseServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/BlockingConnectionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/ConnectionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/Connections.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/ConnectionsImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/DataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/NonBlockingConnectionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/Reactor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/api/MessageEncoderDecoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/api/MessagingProtocol.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/api/StompMessagingProtocol.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/echo/EchoClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/echo/EchoProtocol.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/echo/LineMessageEncoderDecoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/newsfeed/FetchNewsCommand.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/newsfeed/NewsFeed.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/newsfeed/NewsFeedClientMain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/newsfeed/NewsFeedServerMain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/newsfeed/PublishNewsCommand.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/rci/Command.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/rci/ObjectEncoderDecoder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/rci/RCIClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/rci/RemoteCommandInvocationProtocol.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/stomp/StompServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/ActorThreadPool.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/BaseServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/BlockingConnectionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/ConnectionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/Connections.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/NonBlockingConnectionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/Reactor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/Server$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/Server.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1W4inHAFl4pG3JuRpZ72efmR2lU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577722387368" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager" selected="Application.EchoClient">
+    <configuration name="EchoClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bgu.spl.net.impl.echo.EchoClient" />
+      <module name="spl-net" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bgu.spl.net.impl.echo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NewsFeedClientMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bgu.spl.net.impl.newsfeed.NewsFeedClientMain" />
+      <module name="spl-net" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bgu.spl.net.impl.newsfeed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NewsFeedServerMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bgu.spl.net.impl.newsfeed.NewsFeedServerMain" />
+      <module name="spl-net" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bgu.spl.net.impl.newsfeed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StompServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bgu.spl.net.impl.stomp.StompServer" />
+      <module name="spl-net" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bgu.spl.net.impl.stomp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.EchoClient" />
+        <item itemvalue="Application.NewsFeedServerMain" />
+        <item itemvalue="Application.StompServer" />
+        <item itemvalue="Application.NewsFeedClientMain" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b661f945-c916-4a76-9ec4-3fcb8be627a4" name="Default Changelist" comment="" />
+      <created>1576080803763</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576080803763</updated>
+      <workItem from="1576080809460" duration="4560000" />
+      <workItem from="1576425958628" duration="620000" />
+      <workItem from="1577718845591" duration="2901000" />
+      <workItem from="1578415434255" duration="4164000" />
+      <workItem from="1578749751130" duration="1205000" />
+    </task>
+    <task id="LOCAL-00001" summary="1st">
+      <created>1578415564167</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578415564167</updated>
+    </task>
+    <task id="LOCAL-00002" summary="232">
+      <created>1578419952965</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578419952965</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="1st" />
+    <MESSAGE value="232" />
+    <option name="LAST_COMMIT_MESSAGE" value="232" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="588" y="214" width="800" height="677" key="#Project_Structure" timestamp="1578417304713">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="588" y="214" width="800" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1578417304713" />
+    <state x="801" y="265" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1578750127698">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="801" y="265" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1578750127698" />
+    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2" timestamp="1578419952483">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1578419952483" />
+    <state width="1807" height="298" key="GridCell.Tab.0.bottom" timestamp="1578420321101">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="298" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1578420321101" />
+    <state width="1807" height="298" key="GridCell.Tab.0.center" timestamp="1578420321101">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="298" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1578420321101" />
+    <state width="1807" height="298" key="GridCell.Tab.0.left" timestamp="1578420321100">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="298" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1578420321100" />
+    <state width="1807" height="298" key="GridCell.Tab.0.right" timestamp="1578420321101">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="298" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1578420321101" />
+    <state x="482" y="187" width="1024" height="845" key="SettingsEditor" timestamp="1578415547781">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="482" y="187" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1578415547781" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1578419955458">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1578419955458" />
+    <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578750975152">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1578750975152" />
+  </component>
+</project>
