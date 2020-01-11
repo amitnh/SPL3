@@ -100,13 +100,14 @@ public class Reactor<T> implements Server<T> {
                 protocolFactory.get(),
                 clientChan,
                 this);
+        ConnectionsImp.getInstance().addHandler(handler);// adds the handler to Id-Handler map in ConnectionsImp
         clientChan.register(selector, SelectionKey.OP_READ, handler);
     }
 
     private void handleReadWrite(SelectionKey key) {
         @SuppressWarnings("unchecked")
         NonBlockingConnectionHandler<T> handler = (NonBlockingConnectionHandler<T>) key.attachment();
-
+        ConnectionsImp.getInstance().addHandler(handler);// adds the handler to Id-Handler map in ConnectionsImp
         if (key.isReadable()) {
             Runnable task = handler.continueRead();
             if (task != null) {

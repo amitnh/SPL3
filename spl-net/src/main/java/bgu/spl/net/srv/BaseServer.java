@@ -41,7 +41,7 @@ public abstract class BaseServer<T> implements Server<T> {
                         clientSock,
                         encdecFactory.get(),
                         protocolFactory.get());
-
+                ConnectionsImp.getInstance().addHandler(handler);// adds the handler to Id-Handler map in ConnectionsImp
                 execute(handler);
             }
         } catch (IOException ex) {
