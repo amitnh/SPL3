@@ -10,7 +10,7 @@ public class DataBase {
     private static DataBase instance = new DataBase();
     private ConcurrentHashMap<String, String> usersPass; // user name , passcode
     private ConcurrentHashMap<Integer,String > activeUsers; // userId, user name
-    private ConcurrentHashMap<String,ConcurrentLinkedQueue<Integer>> topics;// topic, user id list
+    private ConcurrentHashMap<String,ConcurrentLinkedQueue<String>> topics;// topic, user name list
     private ConcurrentHashMap<Integer,ConcurrentLinkedQueue<String>> clintesBooks;// user id, books list
 
     private DataBase(){
@@ -34,12 +34,12 @@ public class DataBase {
         return clintesBooks;
     }
 
-    public ConcurrentHashMap<String,ConcurrentLinkedQueue<Integer>> getTopics() {
+    public ConcurrentHashMap<String,ConcurrentLinkedQueue<String>> getTopics() {
         return topics;
     }
     public void removeUser(int connectionId){
         clintesBooks.remove(connectionId);
-        for(ConcurrentLinkedQueue<Integer> topic:topics.values())
+        for(ConcurrentLinkedQueue<String> topic:topics.values())
         {
             topic.remove(connectionId);
         }
@@ -57,7 +57,7 @@ public class DataBase {
         this.activeUsers = usersId;
     }
 
-    public void setTopics(ConcurrentHashMap<String, ConcurrentLinkedQueue<Integer>> topics) {
+    public void setTopics(ConcurrentHashMap<String, ConcurrentLinkedQueue<String>> topics) {
         this.topics = topics;
     }
 

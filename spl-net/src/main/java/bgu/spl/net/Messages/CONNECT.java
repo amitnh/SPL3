@@ -8,7 +8,7 @@ public class CONNECT implements Message {
     private String host,login,password;
     private DataBase dataBase;
     private ConnectionHandler handler;
-    public CONNECT(String host, String login, String password, ConnectionHandler handler) {
+    public CONNECT(String host, String login, String password, ConnectionHandler  handler) {
         dataBase= DataBase.getInstance();
         this.host = host;
         this.login = login;
@@ -26,18 +26,18 @@ public class CONNECT implements Message {
                     if (!dataBase.getActiveUsers().contains(login))// user is not in active users
                     {
                         dataBase.addActiveUser(login,password);
-                        handler.send(new CONNECTED("Login successful"));
+                        new CONNECTED("Login successful",handler).process();
                     }
                     else
-                        handler.send(new ERRORmsg("User already logged in"));
+                        new ERRORmsg("User already logged in",handler).process();
                 }
                 else
-                    handler.send(new ERRORmsg("Wrong password"));
+                    new ERRORmsg("Wrong password",handler).process();
             }
             else // new user
             {
                 dataBase.addActiveUser(login,password);
-                handler.send(new CONNECTED("Login successful"));
+                new CONNECTED("Login successful",handler).process();
             }
         }catch (Exception exp) {System.out.println("Could not connect to server");}
     }
