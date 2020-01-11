@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b661f945-c916-4a76-9ec4-3fcb8be627a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/Books.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/Books.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/tempmain.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/include/ConnectionHandlerImp.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/include/ConnectionHandlerImp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/ConnectionHandlerImp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/ConnectionHandlerImp.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
