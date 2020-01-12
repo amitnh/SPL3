@@ -20,19 +20,18 @@ int main (int argc, char *argv[]) {
         return 1;
     }
     bool terminate = false;
-    Books mybooks;
+    Books mybooks = new Books();
 
     while(!terminate){
         const short bufsize = 1024;
         char buf[bufsize];
         std::cout<<"what would you like to do sir?"<<std::endl;
-        std::cin.getline(buf, bufsize);
+        std::cin.getline(buf, bufsize);  //TODO make thread for keyboard
+
         std::string line(buf);
-        int len=line.length();
-        line  = MessageEncDec.Encode(lien);
 
-
-
+        //int len=line.length();
+        line  = MessageEncDec.Encode(line);
 
     }
 

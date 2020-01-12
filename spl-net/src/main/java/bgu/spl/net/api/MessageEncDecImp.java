@@ -9,7 +9,7 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
     @Override
     public Message decodeNextByte(byte nextByte) {
         return null;
-    }
+    } //TODO: copy the encoder decoder from a friend
 
     @Override
     public byte[] encode(Object o) {

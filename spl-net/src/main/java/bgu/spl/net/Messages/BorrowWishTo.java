@@ -16,6 +16,7 @@ public class BorrowWishTo implements Message {
 
     @Override
     public void process() {
-        new Message()
+
+        //new Message()
     }
 }
