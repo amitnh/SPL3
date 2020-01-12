@@ -100,6 +100,7 @@ public class Reactor<T> implements Server<T> {
                 protocolFactory.get(),
                 clientChan,
                 this);
+
         ConnectionsImp.getInstance().addHandler(handler);// adds the handler to Id-Handler map in ConnectionsImp
         clientChan.register(selector, SelectionKey.OP_READ, handler);
     }

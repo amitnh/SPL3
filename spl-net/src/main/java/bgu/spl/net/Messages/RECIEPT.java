@@ -7,7 +7,7 @@ public class RECIEPT implements Message{
     private int id;
     private ConnectionHandler handler;
 
-    public RECIEPT(String msg, int id, ConnectionHandler handler) {
+    public RECIEPT(String msg, ConnectionHandler handler) {
         this.msg = msg;
         this.id = id;
         this.handler = handler;
@@ -15,6 +15,6 @@ public class RECIEPT implements Message{
 
     @Override
     public void process() {
-        handler.send("RECIEPT " + id + " " + msg);
+        handler.send(msg);
     }
 }

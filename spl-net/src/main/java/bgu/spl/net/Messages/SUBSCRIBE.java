@@ -24,6 +24,10 @@ public class SUBSCRIBE implements Message {
     public void process() {
         dataBase.getTopics().putIfAbsent(topic,new ConcurrentLinkedQueue<>());
         dataBase.getTopics().get(topic).add(new Pair<>(userName,id));
-        new RECIEPT("joined club " +topic , id ,handler).process();
+        new RECIEPT("SUBSCRIBE\n" +
+                "destination:"+ topic +
+                "\nid:" + id +
+                "\n\n" +
+                "\u0000",handler).process();
     }
 }
