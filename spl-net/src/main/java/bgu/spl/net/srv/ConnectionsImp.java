@@ -13,10 +13,6 @@ public class ConnectionsImp<T> implements Connections{
         dataBase= DataBase.getInstance();
         connectionsHandlers= new ConcurrentHashMap<>();
     }
-    public int getConnectionId()
-    {
-        return ++connectiontId;
-    }
     public static ConnectionsImp getInstance(){
         return instance;
     }
@@ -40,8 +36,10 @@ public class ConnectionsImp<T> implements Connections{
     public void disconnect(int connectionId) {
         dataBase.removeUser(connectionId);
     }
-    public void addHandler(ConnectionHandler handler){
-        connectionsHandlers.put(++acceptid,handler);
+    public synchronized int addHandler(ConnectionHandler handler){// TODO: check sync ?!?!?!?!
+        connectionsHandlers.put(++connectiontId,handler);
+        return connectiontId;
     }
+
 
 }

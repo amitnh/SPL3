@@ -32,7 +32,6 @@ public class NonBlockingConnectionHandler<T> implements ConnectionHandler<T> {
         this.chan = chan;
         this.encdec = reader;
         this.protocol = protocol;
-        protocol.start(ConnectionsImp.getInstance().getConnectionId(),ConnectionsImp.getInstance());// TODO: to check
         this.reactor = reactor;
     }
 

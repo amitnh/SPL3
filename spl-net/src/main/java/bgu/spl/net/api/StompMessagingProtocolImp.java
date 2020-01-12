@@ -7,7 +7,7 @@ import java.util.function.Supplier;
 
 public class StompMessagingProtocolImp implements StompMessagingProtocol, Supplier {
     private boolean shouldTerminate = false;
-    
+
     @Override
     public void start(int connectionId, Connections<String> connections) {
 
@@ -25,8 +25,10 @@ public class StompMessagingProtocolImp implements StompMessagingProtocol, Suppli
     public void terminate(){ shouldTerminate=true;}
 
 
+
+//__________________________________________________________________________________________________
     @Override // factory method
-    public Object get() {
+    public StompMessagingProtocolImp get() {
         return new StompMessagingProtocolImp();
     }
 
