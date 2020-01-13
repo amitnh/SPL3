@@ -7,6 +7,7 @@ public class User {
     private String name,password;
     private int connectionId;
     private ConnectionHandler handler;
+    private boolean isActive;
     private HashMap<Integer,String> subscriptionMap; // subsscription id - topic
 
     public User(String name, String password, int connectionId, ConnectionHandler handler, HashMap<Integer, String> subscriptionMap) {
@@ -14,9 +15,16 @@ public class User {
         this.password = password;
         this.connectionId = connectionId;
         this.handler = handler;
-        this.subscriptionMap = subscriptionMap;
+        this.isActive=false;
     }
 
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
 
     public String getName() {
         return name;

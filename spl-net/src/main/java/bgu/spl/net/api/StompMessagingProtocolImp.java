@@ -7,6 +7,7 @@ import bgu.spl.net.srv.ConnectionsImp;
 import bgu.spl.net.srv.DataBase;
 import bgu.spl.net.srv.User;
 
+import javax.xml.crypto.Data;
 import java.util.function.Supplier;
 
 public class StompMessagingProtocolImp implements StompMessagingProtocol, Supplier {
@@ -18,11 +19,11 @@ public class StompMessagingProtocolImp implements StompMessagingProtocol, Suppli
     public void start(int connectionId, ConnectionsImp connections) {
         this.connections = ConnectionsImp.getInstance(); //TODO: maybe change it to not instance
         this.connectionId=connectionId;
-        this.user = new User(null,null,connectionId,null,null);
+        this.user = DataBase.getInstance().getUserByConnectionId(connectionId);// user has only ConnectionId and Handler !
     }
     @Override
     public void process(Frame frame) {
-        if(frame.getClass()== SEND.class)
+        if(frame.getClass()== CONNECT.class)
         {
 
         }

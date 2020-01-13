@@ -19,7 +19,7 @@ public class CONNECT extends Frame {
             {
                 if (u.getPassword()==headers[3]) // password
                 {
-
+                    if (u.get)
                 }
             }
         }
