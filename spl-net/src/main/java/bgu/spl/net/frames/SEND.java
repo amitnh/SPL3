@@ -10,7 +10,7 @@ public class SEND extends Frame {
     }
 
     @Override
-    void process() {
+    public void process() {
         ConnectionsImp.getInstance().send(headers[0],body);
     }
 }

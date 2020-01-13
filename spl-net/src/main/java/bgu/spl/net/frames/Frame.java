@@ -25,5 +25,5 @@ public abstract class Frame {
         this.body = body;
     }
 
-    abstract void process();
+    abstract public void process();
 }

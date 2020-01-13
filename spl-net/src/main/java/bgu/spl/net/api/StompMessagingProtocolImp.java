@@ -1,21 +1,47 @@
 package bgu.spl.net.api;
 
 import bgu.spl.net.Messages.Message;
+import bgu.spl.net.frames.*;
 import bgu.spl.net.srv.Connections;
+import bgu.spl.net.srv.ConnectionsImp;
+import bgu.spl.net.srv.DataBase;
+import bgu.spl.net.srv.User;
 
 import java.util.function.Supplier;
 
 public class StompMessagingProtocolImp implements StompMessagingProtocol, Supplier {
     private boolean shouldTerminate = false;
-
+    private int connectionId;
+    private User user;
+    private ConnectionsImp connections;
     @Override
-    public void start(int connectionId, Connections<String> connections) {
-
+    public void start(int connectionId, ConnectionsImp connections) {
+        this.connections = ConnectionsImp.getInstance(); //TODO: maybe change it to not instance
+        this.connectionId=connectionId;
+        this.user = new User(null,null,connectionId,null,null);
     }
-
     @Override
-    public void process(Message msg) {
-        msg.process();
+    public void process(Frame frame) {
+        if(frame.getClass()== SEND.class)
+        {
+
+        }
+        else if (frame.getClass()== SEND.class)
+        {
+            frame.process();
+        }
+        else if (frame.getClass()== SUBSCRIBE.class)
+        {
+            frame.process();
+            String[] receipt = {frame.getHeaders()[1]}; // headers[1] == id
+            new RECEIPT(connectionId,receipt,"").process();
+        }
+        else if (frame.getClass()== UNSUBSCRIBE.class)
+        {
+            frame.process();
+            String[] receipt = {frame.getHeaders()[1]}; // headers[1] == id
+            new RECEIPT(connectionId,receipt,"").process();
+        }
     }
 
     @Override

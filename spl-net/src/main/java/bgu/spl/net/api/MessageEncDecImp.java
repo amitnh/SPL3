@@ -12,7 +12,7 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
     } //TODO: copy the encoder decoder from a friend
 
     @Override
-    public byte[] encode(Object o) {
+    public byte[] encode(Class message) {
         return new byte[0];
     }
 

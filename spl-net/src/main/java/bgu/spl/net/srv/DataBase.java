@@ -7,70 +7,54 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class DataBase {
-    int activeid=0;
+    private ConcurrentLinkedQueue<User> users;
+    private ConcurrentHashMap<String,ConcurrentLinkedQueue<User>> topics;// topic, list of users
+
+    int id=0;
     private static DataBase instance = new DataBase();
-    private ConcurrentHashMap<String, String> usersPass; // user name , passcode
-    private ConcurrentHashMap<Integer,String > activeUsers; // userId, user name
-    private ConcurrentHashMap<String,ConcurrentLinkedQueue<Pair<String,Integer>>> topics;// topic, Pair<user name ,id> list
-    private ConcurrentHashMap<String,ConcurrentLinkedQueue<String>> clintesBooks;// user name, books list
+    public static DataBase getInstance(){return instance;}
 
-    private DataBase(){
-        usersPass = new ConcurrentHashMap<>();
-        activeUsers = new ConcurrentHashMap<>();
-        topics = new ConcurrentHashMap<>();
-        clintesBooks = new ConcurrentHashMap<>();
-    }
-    public static DataBase getInstance(){return instance;}// singleton
-
-    public ConcurrentHashMap<String, String> getUsersPass() {
-        return usersPass;
+    public DataBase(ConcurrentLinkedQueue<User> users, ConcurrentHashMap<String, ConcurrentLinkedQueue<User>> topics, int id) {
+        this.users = users;
+        this.topics = topics;
+        this.id = id;
     }
 
-
-    //Getters
-    public ConcurrentHashMap<Integer, String> getActiveUsers() {
-        return activeUsers;
-    }
-    public ConcurrentHashMap<String, ConcurrentLinkedQueue<String>> getClintesBooks() {
-        return clintesBooks;
+    public ConcurrentLinkedQueue<User> getUsers() {
+        return users;
     }
 
-    public ConcurrentHashMap<String,ConcurrentLinkedQueue<Pair<String,Integer>>>  getTopics() {
+    public void setUsers(ConcurrentLinkedQueue<User> users) {
+        this.users = users;
+    }
+
+    public ConcurrentHashMap<String, ConcurrentLinkedQueue<User>> getTopics() {
         return topics;
     }
-    public void removeUser(int connectionId){
-        clintesBooks.remove(connectionId);
-//        for(ConcurrentHashMap<String,ConcurrentLinkedQueue<Pair<String,Integer>>> topic:topics.values())TODO: LATER.....
-//        {
-//            topic.remove(connectionId);
-//        }
-       usersPass.remove(activeUsers.get(connectionId));
-        activeUsers.remove(connectionId);
-    }
 
-
-    //Setters
-       public void setUsersPass(ConcurrentHashMap<String, String> usersPass) {
-        this.usersPass = usersPass;
-    }
-
-    public void setUsersId(ConcurrentHashMap<Integer, String> usersId) {
-        this.activeUsers = usersId;
-    }
-
-    public void setTopics(ConcurrentHashMap<String,ConcurrentLinkedQueue<Pair<String,Integer>>>  topics) {
+    public void setTopics(ConcurrentHashMap<String, ConcurrentLinkedQueue<User>> topics) {
         this.topics = topics;
     }
 
-    public void setClintesBooks(ConcurrentHashMap<String, ConcurrentLinkedQueue<String>> clintesBooks) {
-        this.clintesBooks = clintesBooks;
+    public int getId() {
+        return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
-
-    public void addActiveUser(String name,String password) {
+    public void addActiveUser(String name, String password) {
         usersPass.putIfAbsent(name,password);
-        activeUsers.put(++activeid,name);
+        activeUsers.put(++id,name);
     }
 
+    public User getUserByConnectionId(int connectionId) {
+        for( User u:users)
+        {
+            if(u.getConnectionId()==connectionId)
+                return u;
+        }
+        return null;
+    }
 }

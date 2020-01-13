@@ -1,6 +1,8 @@
 package bgu.spl.net.api;
 
-public interface MessageEncoderDecoder<Message> {
+import bgu.spl.net.frames.Frame;
+
+public interface MessageEncoderDecoder<Frame> {
 
     /**
      * add the next byte to the decoding process
@@ -9,7 +11,7 @@ public interface MessageEncoderDecoder<Message> {
      * message
      * @return a message if this byte completes one or null if it doesnt.
      */
-    Message decodeNextByte(byte nextByte);
+    Frame decodeNextByte(byte nextByte);
 
     /**
      * encodes the given message to bytes array
@@ -17,6 +19,6 @@ public interface MessageEncoderDecoder<Message> {
      * @param message the message to encode
      * @return the encoded bytes
      */
-    byte[] encode(Message message);
+    byte[] encode(Class<? extends Frame> message);
 
 }

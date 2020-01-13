@@ -12,7 +12,7 @@ public class SUBSCRIBE  extends Frame{
     }
 
     @Override
-    void process() {
+    public void process() {
         DataBase.getInstance().getTopics().putIfAbsent(topic,new ConcurrentLinkedQueue<>());
         DataBase.getInstance().getTopics().get(topic).add(new Pair<>(userName,id));
         new RECIEPT().process();
