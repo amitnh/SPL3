@@ -1,6 +1,5 @@
 package bgu.spl.net.api;
 
-import bgu.spl.net.Messages.Message;
 import bgu.spl.net.frames.Frame;
 
 import java.util.function.Supplier;
@@ -8,7 +7,7 @@ import java.util.function.Supplier;
 public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
 
     @Override
-    public Message decodeNextByte(byte nextByte) {
+    public Frame decodeNextByte(byte nextByte) {
         return null;
     } //TODO: copy the encoder decoder from a friend
 

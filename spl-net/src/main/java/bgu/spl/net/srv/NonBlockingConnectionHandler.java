@@ -1,6 +1,5 @@
 package bgu.spl.net.srv;
 
-import bgu.spl.net.Messages.Message;
 import bgu.spl.net.api.MessageEncDecImp;
 import bgu.spl.net.api.StompMessagingProtocol;
 import bgu.spl.net.frames.Frame;
@@ -49,7 +48,7 @@ public class NonBlockingConnectionHandler<T> implements ConnectionHandler<T> {
             return () -> {
                 try {
                     while (buf.hasRemaining()) {
-                        Message nextMessage = encdec.decodeNextByte(buf.get());
+                        Frame nextMessage = encdec.decodeNextByte(buf.get());
                         if (nextMessage != null) {
                            protocol.process(nextMessage);
 

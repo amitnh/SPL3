@@ -9,16 +9,15 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 public class DataBase {
     private ConcurrentLinkedQueue<User> users;
     private ConcurrentHashMap<String,ConcurrentLinkedQueue<User>> topics;// topic, list of users
-
-    int id=0;
     private static DataBase instance = new DataBase();
-    public static DataBase getInstance(){return instance;}
+    private int id;
 
-    public DataBase(ConcurrentLinkedQueue<User> users, ConcurrentHashMap<String, ConcurrentLinkedQueue<User>> topics, int id) {
-        this.users = users;
-        this.topics = topics;
-        this.id = id;
+    private DataBase() {
+        this.users = new ConcurrentLinkedQueue<>();
+        this.topics = new ConcurrentHashMap<>();
+        id=0;
     }
+    public static DataBase getInstance(){return instance;}
 
     public ConcurrentLinkedQueue<User> getUsers() {
         return users;
@@ -44,11 +43,6 @@ public class DataBase {
         this.id = id;
     }
 
-    public void addActiveUser(String name, String password) {
-        usersPass.putIfAbsent(name,password);
-        activeUsers.put(++id,name);
-    }
-
     public User getUserByConnectionId(int connectionId) {
         for( User u:users)
         {
@@ -57,4 +51,5 @@ public class DataBase {
         }
         return null;
     }
+
 }
