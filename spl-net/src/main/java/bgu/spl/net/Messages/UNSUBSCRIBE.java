@@ -23,6 +23,9 @@ public class UNSUBSCRIBE implements Message {
     @Override
     public void process() {
         dataBase.getTopics().get(topic).remove(new Pair<>(userName,id));
-        new RECIEPT("RECEIPT\nreciept-id:"+ id + "\n\n" + "\u0000",handler).process();
+        new RECIEPT("RECEIPT\n" +
+                "reciept-id:"+ id +
+                "\n\n" +
+                "\u0000",handler).process();
     }
 }
