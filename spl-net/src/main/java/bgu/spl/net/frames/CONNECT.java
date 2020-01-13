@@ -19,8 +19,23 @@ public class CONNECT extends Frame {
             {
                 if (u.getPassword()==headers[3]) // password
                 {
-                    if (u.get)
+                    if (!u.isActive())
+                    {
+                        u.setActive(true);
+                    }
+                    else //already inside, ignore ?
+                    {
+
+                    }
                 }
+                else if (u.getPassword()!=null)
+                {
+                    //wrong password
+                }
+            }
+            else // new User name and password
+            {
+
             }
         }
 

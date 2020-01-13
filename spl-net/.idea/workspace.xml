@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b661f945-c916-4a76-9ec4-3fcb8be627a4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/frames/ERRORfrm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/StompMessagingProtocolImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/StompMessagingProtocolImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/frames/CONNECT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/frames/CONNECT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/BaseServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/BaseServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +159,7 @@
       <workItem from="1578415434255" duration="4164000" />
       <workItem from="1578749751130" duration="16284000" />
       <workItem from="1578906310780" duration="7878000" />
-      <workItem from="1578915165393" duration="10321000" />
+      <workItem from="1578915165393" duration="11142000" />
     </task>
     <task id="LOCAL-00001" summary="1st">
       <created>1578415564167</created>
@@ -261,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578924141764</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Frames update">
+      <created>1578926312972</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1578926312972</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,18 +293,18 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="214" width="800" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1578417304713" />
-    <state x="801" y="265" width="736" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1578926271319">
+    <state x="801" y="265" width="736" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1578926783551">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="801" y="265" width="736" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1578926271319" />
+    <state x="801" y="265" width="736" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1578926783551" />
     <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578756227911">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1578756227911" />
-    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2" timestamp="1578924141331">
+    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2" timestamp="1578926312067">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1578924141331" />
+    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1578926312067" />
     <state width="1807" height="298" key="GridCell.Tab.0.bottom" timestamp="1578420321101">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
