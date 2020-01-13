@@ -12,14 +12,6 @@ public class ERRORfrm extends Frame {
 
     @Override
     public void process() {
-
         ConnectionsImp.getInstance().send(connectionId,this);
-
-
-        try {
-            handler.close(); // TODO: B carefull ! it may close before sending the msg in the Reactor
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

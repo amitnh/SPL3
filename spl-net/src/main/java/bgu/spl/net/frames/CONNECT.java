@@ -1,7 +1,5 @@
 package bgu.spl.net.frames;
 
-import bgu.spl.net.Messages.CONNECTED;
-import bgu.spl.net.Messages.ERRORmsg;
 import bgu.spl.net.srv.DataBase;
 import bgu.spl.net.srv.User;
 
@@ -43,31 +41,5 @@ public class CONNECT extends Frame {
             DataBase.getInstance().getUsers().add(new User(headers[2],headers[3],currUser.getConnectionId(),currUser.getHandler(),null));
         }
 
-
-
-
-
-        try{
-            if(dataBase.getUsersPass().containsKey(login)) // user Exists
-            {
-                if(dataBase.getUsersPass().get(login)==password) // correct password
-                {
-                    if (!dataBase.getActiveUsers().contains(login))// user is not in active users
-                    {
-                        dataBase.addActiveUser(login,password);
-                        new CONNECTED(1.2,handler).process(); // TODO: check what is that version
-                    }
-                    else
-                        new ERRORmsg("User already logged in",receiptId,handler).process();
-                }
-                else
-                    new ERRORmsg("Wrong password",receiptId,handler).process();
-            }
-            else // new user
-            {
-                dataBase.addActiveUser(login,password);
-                new CONNECTED(1.2,handler).process();
-            }
-        }catch (Exception exp) {System.out.println("Could not connect to server");}
     }
 }

@@ -1,6 +1,5 @@
 package bgu.spl.net.api;
 
-import bgu.spl.net.Messages.Message;
 import bgu.spl.net.frames.*;
 import bgu.spl.net.srv.Connections;
 import bgu.spl.net.srv.ConnectionsImp;
@@ -34,7 +33,7 @@ public class StompMessagingProtocolImp implements StompMessagingProtocol, Suppli
         }
         else if (frame.getClass()== SUBSCRIBE.class)
         {
-            frame.process();
+            new SUBSCRIBE(user,frame.getHeaders(),frame.getBody()).process();
             String[] receipt = {frame.getHeaders()[1]}; // headers[1] == id
             new RECEIPT(connectionId,receipt,"").process();
         }
@@ -43,6 +42,12 @@ public class StompMessagingProtocolImp implements StompMessagingProtocol, Suppli
             frame.process();
             String[] receipt = {frame.getHeaders()[1]}; // headers[1] == id
             new RECEIPT(connectionId,receipt,"").process();
+        }
+        else if(frame.getClass()== DISCONNECT.class)
+        {
+            new RECEIPT(user.getConnectionId(),frame.getHeaders(),"");
+            user.setActive(false);
+            terminate();
         }
     }
 
