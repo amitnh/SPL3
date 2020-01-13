@@ -1,0 +1,16 @@
+package bgu.spl.net.frames;
+
+import bgu.spl.net.Messages.Message;
+import bgu.spl.net.srv.ConnectionsImp;
+
+public class SEND extends Frame {
+
+    public SEND(String[] headers, String body) {
+        super(headers, body);
+    }
+
+    @Override
+    void process() {
+        ConnectionsImp.getInstance().send(headers[0],body);
+    }
+}

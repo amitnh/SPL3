@@ -1,6 +1,5 @@
 package bgu.spl.net.Messages;
 
-import bgu.spl.net.srv.ConnectionHandler;
 import bgu.spl.net.srv.DataBase;
 
 public class SENDadd implements Message {

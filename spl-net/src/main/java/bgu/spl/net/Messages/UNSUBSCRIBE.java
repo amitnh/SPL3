@@ -4,8 +4,6 @@ import bgu.spl.net.srv.ConnectionHandler;
 import bgu.spl.net.srv.DataBase;
 import javafx.util.Pair;
 
-import java.util.concurrent.ConcurrentLinkedQueue;
-
 public class UNSUBSCRIBE implements Message {
     private String topic;
     private int id;

@@ -4,7 +4,7 @@ import bgu.spl.net.srv.ConnectionHandler;
 
 import java.io.IOException;
 
-public class ERRORmsg implements Message{
+public class ERRORmsg implements Message {
     private String msg;
     private int receiptId;
     private ConnectionHandler handler;

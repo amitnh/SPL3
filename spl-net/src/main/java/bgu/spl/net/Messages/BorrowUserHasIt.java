@@ -1,7 +1,6 @@
 package bgu.spl.net.Messages;
 
 import bgu.spl.net.srv.ConnectionsImp;
-import bgu.spl.net.srv.DataBase;
 
 public class BorrowUserHasIt implements Message {
     private String topic,bookName,userName;
