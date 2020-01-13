@@ -1,6 +1,7 @@
 package bgu.spl.net.Messages;
 
 import bgu.spl.net.srv.ConnectionHandler;
+import bgu.spl.net.srv.ConnectionsImp;
 import bgu.spl.net.srv.DataBase;
 
 public class BorrowWishTo implements Message {
@@ -16,7 +17,9 @@ public class BorrowWishTo implements Message {
 
     @Override
     public void process() {
-
-        //new Message()
+        ConnectionsImp connections = ConnectionsImp.getInstance();
+        connections.send(topic,"SEND\n" +
+                "destination:" + topic +
+                "\n\n" + userName + " wish to borrow " + bookName +"\n\u0000" );
     }
 }
