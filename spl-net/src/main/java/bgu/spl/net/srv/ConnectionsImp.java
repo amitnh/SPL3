@@ -26,9 +26,9 @@ public class ConnectionsImp<T> implements Connections{
 
     @Override
     public void send(String channel, Object msg) {
-        for(Pair<String, Integer> connectionId:dataBase.getTopics().get(channel))
+        for(User u:dataBase.getTopics().get(channel))
         {
-            send(connectionId.getValue(),msg);
+            send(u.getConnectionId(),msg);
         }
     }
 

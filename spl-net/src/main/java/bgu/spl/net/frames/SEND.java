@@ -11,6 +11,6 @@ public class SEND extends Frame {
 
     @Override
     public void process() {
-        ConnectionsImp.getInstance().send(headers[0],body);
+        ConnectionsImp.getInstance().send(headers[0],this);
     }
 }

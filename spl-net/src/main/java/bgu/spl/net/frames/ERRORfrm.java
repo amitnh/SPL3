@@ -13,14 +13,9 @@ public class ERRORfrm extends Frame {
     @Override
     public void process() {
 
-        ConnectionsImp.getInstance().send(connectionId,body);
+        ConnectionsImp.getInstance().send(connectionId,this);
 
 
-        handler.send("ERROR\n" +
-                "receipt-id: " + receiptId +
-                "\nmessage: " + msg +
-                "\n\n" +
-                "\u0000");
         try {
             handler.close(); // TODO: B carefull ! it may close before sending the msg in the Reactor
         } catch (IOException e) {
