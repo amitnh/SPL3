@@ -19,6 +19,6 @@ public interface MessageEncoderDecoder<Frame> {
      * @param message the message to encode
      * @return the encoded bytes
      */
-    byte[] encode(Class<? extends Frame> message);
+    byte[] encode(Frame message);
 
 }

@@ -3,6 +3,7 @@ package bgu.spl.net.srv;
 import bgu.spl.net.Messages.Message;
 import bgu.spl.net.api.MessageEncDecImp;
 import bgu.spl.net.api.StompMessagingProtocol;
+import bgu.spl.net.frames.Frame;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -115,7 +116,7 @@ public class NonBlockingConnectionHandler<T> implements ConnectionHandler<T> {
     }
 
     @Override
-    public void send(T msg) {
+    public void send(Frame msg) {
         writeQueue.add(ByteBuffer.wrap(encdec.encode(msg)));
         reactor.updateInterestedOps(chan, SelectionKey.OP_READ | SelectionKey.OP_WRITE);
     }

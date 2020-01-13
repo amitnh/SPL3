@@ -6,13 +6,16 @@ import bgu.spl.net.srv.DataBase;
 import bgu.spl.net.srv.User;
 
 public class CONNECT extends Frame {
-    public CONNECT(String[] headers, String body) {
+    private User currUser;
+    public CONNECT(String[] headers, String body,User currUser) {
         super(headers, body);
+        this.currUser=currUser;
     }
 
     @Override
     public void process() {
         DataBase dataBase = DataBase.getInstance();
+        boolean isNewUser = true;
         for (User u:dataBase.getUsers())
         {
             if(u.getName()==headers[2]) // login
@@ -25,19 +28,21 @@ public class CONNECT extends Frame {
                     }
                     else //already inside, ignore ?
                     {
-
+                        new ERRORfrm(u.getConnectionId(),new String[]{"","User already logged in"},"").process();//wrong password
                     }
                 }
                 else if (u.getPassword()!=null)
                 {
-                    //wrong password
+                    new ERRORfrm(u.getConnectionId(),new String[]{"","Wrong password"},"").process();//wrong password
                 }
-            }
-            else // new User name and password
-            {
-
+                isNewUser=false;
             }
         }
+        if (isNewUser) // new User name and password
+        {
+            DataBase.getInstance().getUsers().add(new User(headers[2],headers[3],currUser.getConnectionId(),currUser.getHandler(),null));
+        }
+
 
 
 
