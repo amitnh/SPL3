@@ -8,48 +8,89 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
     private byte[] bytes = new byte[1 << 10]; //start with 1k
     private Frame frame;
     private int state=0,i=0;
+    private boolean isHeader=false;
+    private String[] headers;
+    private int headersIndex=0;
+    private String command;
     @Override
     public Frame decodeNextByte(byte nextByte) {
-    if (nextByte=='\u0000')
-    {
-        frame.setBody(bytes.toString());
-        bytes= new byte[1 << 10];
-        return frame;
-    }
-    if(i==0)
-    {
-        state=0;
-    }
-    if (state==0)
-    {
-        if (nextByte=='\n')
+        if (nextByte=='\u0000')
         {
-            String command = new String(bytes);
             switch (command){
                 case "SEND":
-                    frame = new SEND(null,null);
+                    frame = new SEND(headers,new String(bytes));
                     break;
                 case "CONNECT":
-                    frame = new CONNECT(null,null,null);
+                    frame = new CONNECT(headers,new String(bytes),null);
                     break;
                 case "SUBSCRIBE":
-                    frame = new SUBSCRIBE(null,null,null);
+                    frame = new SUBSCRIBE(null,headers,new String(bytes));
                     break;
                 case "UNSUBSCRIBE":
-                    frame = new UNSUBSCRIBE(null,null,null);
+                    frame = new UNSUBSCRIBE(null,headers,new String(bytes));
                     break;
                 case "DISCONNECT":
-                    frame = new DISCONNECT(null,null);
+                    frame = new DISCONNECT(headers,new String(bytes));
                     break;
             }
-            state=1;
+            bytes= new byte[1 << 10];
+            i=0;
+            state=0;
+            isHeader=false;
+            headersIndex=0;
+            return frame;
         }
-        else
+        if (state==0)
+        {
+            if (nextByte=='\n')
+            {
+                command = new String(bytes);
+                bytes = new byte[1 << 10];
+                i=0;
+                // switc
+                state=1;
+                headers = new String[]{};
+            }
+            else
+            {
+                bytes[i] = nextByte;
+                i++;
+            }
+        }
+        else if (state==1)
+        {
+            if(nextByte=='\n') // end of line
+            {
+                if (bytes[i-1]=='\n')
+                {
+                    state=2; // going to body state
+                }
+                else if(isHeader) // headline or the data ?
+                {
+                    headers[headersIndex]=new String(bytes);
+                    headersIndex++;
+                    bytes = new byte[1 << 10];
+                    i=0;
+                    isHeader=false;
+                }
+            }
+            else if(nextByte==':')
+            {
+                bytes = new byte[1 << 10];
+                i=0;
+                isHeader=true;
+            }
+            else
+            {
+                bytes[i] = nextByte;
+                i++;
+            }
+        }
+        else if(state==2)
         {
             bytes[i] = nextByte;
+            i++;
         }
-    }
-
 
         return null;
     }
