@@ -3,26 +3,30 @@
 //
 
 #include "../../include/MessageEncDec.h"
+std::vector<std::string> FramesReceived;
 
 MessageEncDec::MessageEncDec(){
 
-    std::string MessageEncDec::Decode(std::string, int length){
-        std::string frame;
+
+    void MessageEncDec::Decode(std::string frame, int length){
+
+        //frame already in UTF8, UNSTOMP it:
+        //Switch(first line of frame)
+        //....
+        //....
+        //send to client thread to process..
 
 
-        return frame;
     }
-
     std::string MessageEncDec::Encode(const std::string& frame, int length){
-        std::string frame;
 
+        //frame already ready as STOMP, Send as bytes:
         return frame;
     }
 
-
-
-
-
+    void MessageEncDec::add(std::string frametodecode){
+        FramesReceived.pushback(frametodecode);
+    }
 
 
 

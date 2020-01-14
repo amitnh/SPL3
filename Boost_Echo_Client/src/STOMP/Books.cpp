@@ -4,10 +4,14 @@
 
 #include "../../include/Books.h"
 
-std::vector<std::string> Books;
+std::vector<std::string> books;//change to vector of arrays -[name,owner,isavailable]
 
 Books:Books(){}
 
+
+std::vector<std::string> Books::getBooks(){
+    return books
+}
 void Books::AddBook(String name){
     Books.push_back(name);
 }
