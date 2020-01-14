@@ -5,6 +5,8 @@
  */
 package bgu.spl.net.srv;
 
+import bgu.spl.net.frames.Frame;
+
 import java.io.Closeable;
 
 /**
@@ -17,6 +19,6 @@ public interface ConnectionHandler<T> extends Closeable {
      *
      */
 
-    void send(T msg);
+    void send(Frame msg);
 
 }

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b661f945-c916-4a76-9ec4-3fcb8be627a4" name="Default Changelist" comment="" />
+    <list default="true" id="b661f945-c916-4a76-9ec4-3fcb8be627a4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +68,7 @@
       <recent name="bgu.spl.net.Messages" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.EchoClient">
+  <component name="RunManager" selected="Application.NewsFeedServerMain">
     <configuration name="EchoClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bgu.spl.net.impl.echo.EchoClient" />
       <module name="spl-net" />
@@ -120,8 +123,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.EchoClient" />
         <item itemvalue="Application.NewsFeedServerMain" />
+        <item itemvalue="Application.EchoClient" />
         <item itemvalue="Application.StompServer" />
         <item itemvalue="Application.NewsFeedClientMain" />
       </list>
@@ -154,6 +157,8 @@
       <workItem from="1577718845591" duration="2901000" />
       <workItem from="1578415434255" duration="4164000" />
       <workItem from="1578749751130" duration="16284000" />
+      <workItem from="1578906310780" duration="7878000" />
+      <workItem from="1578915165393" duration="18505000" />
     </task>
     <task id="LOCAL-00001" summary="1st">
       <created>1578415564167</created>
@@ -211,7 +216,98 @@
       <option name="project" value="LOCAL" />
       <updated>1578855219169</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Messeages update">
+      <created>1578908716956</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1578908716956</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Messeages finished (without debugging yet)">
+      <created>1578909592730</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1578909592730</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Messeages finished (without debugging yet)">
+      <created>1578915032113</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1578915032113</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Frames update">
+      <created>1578917730287</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1578917730288</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Frames update">
+      <created>1578922769660</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1578922769660</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Frames update">
+      <created>1578924141764</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1578924141764</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Frames update">
+      <created>1578926312972</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1578926312972</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Frames update">
+      <created>1578927155426</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1578927155426</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Check">
+      <created>1578930541456</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1578930541456</updated>
+    </task>
+    <task id="LOCAL-00018" summary="CONNECTED">
+      <created>1578932347368</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1578932347368</updated>
+    </task>
+    <task id="LOCAL-00019" summary="PROTOCOL COMPLETE">
+      <created>1578933720634</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1578933720634</updated>
+    </task>
+    <task id="LOCAL-00020" summary="PROTOCOL COMPLETE and error soo far sooo ok">
+      <created>1578934169608</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1578934169608</updated>
+    </task>
+    <task id="LOCAL-00021" summary="encode">
+      <created>1578935669664</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1578935669664</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,25 +324,33 @@
     <MESSAGE value="Messages" />
     <MESSAGE value="Protocollll" />
     <MESSAGE value=" 123" />
-    <option name="LAST_COMMIT_MESSAGE" value=" 123" />
+    <MESSAGE value="Messeages update" />
+    <MESSAGE value="Messeages finished (without debugging yet)" />
+    <MESSAGE value="Frames update" />
+    <MESSAGE value="Check" />
+    <MESSAGE value="CONNECTED" />
+    <MESSAGE value="PROTOCOL COMPLETE" />
+    <MESSAGE value="PROTOCOL COMPLETE and error soo far sooo ok" />
+    <MESSAGE value="encode" />
+    <option name="LAST_COMMIT_MESSAGE" value="encode" />
   </component>
   <component name="WindowStateProjectService">
     <state x="588" y="214" width="800" height="677" key="#Project_Structure" timestamp="1578417304713">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="214" width="800" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1578417304713" />
-    <state x="801" y="265" width="736" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1578854577864">
+    <state x="801" y="265" width="736" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1578934000541">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="801" y="265" width="736" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1578854577864" />
+    <state x="801" y="265" width="736" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1578934000541" />
     <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578756227911">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1578756227911" />
-    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2" timestamp="1578857148868">
+    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2" timestamp="1578935669108">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1578857148868" />
+    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1578935669108" />
     <state width="1807" height="298" key="GridCell.Tab.0.bottom" timestamp="1578420321101">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -271,21 +375,25 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="499" height="446" key="SwitcherDM/67.27.1853.1053@67.27.1853.1053" timestamp="1578853432231" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1578857155717">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1578935672856">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1578857155717" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1578935672856" />
     <state x="772" y="244" width="432" height="616" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578851064522">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="772" y="244" width="432" height="616" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1578851064522" />
-    <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578853439183">
+    <state x="761" y="472" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578926307371">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1578853439183" />
-    <state x="638" y="283" width="1096" height="784" key="find.popup" timestamp="1578854211816">
+    <state x="761" y="472" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1578926307371" />
+    <state x="638" y="283" width="1096" height="784" key="find.popup" timestamp="1578933196340">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="638" y="283" width="1096" height="784" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1578854211816" />
+    <state x="638" y="283" width="1096" height="784" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1578933196340" />
+    <state x="738" y="181" width="500" height="743" key="refactoring.ChangeSignatureDialog" timestamp="1578919329475">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="738" y="181" width="500" height="743" key="refactoring.ChangeSignatureDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1578919329475" />
   </component>
 </project>

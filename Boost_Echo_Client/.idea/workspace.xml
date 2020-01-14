@@ -11,12 +11,20 @@
   <component name="ChangeListManager">
     <list default="true" id="107e0c44-c664-4073-bdc1-909920ffe995" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/tempmain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/tempmain.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spl-net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spl-net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spl-net/src/main/java/bgu/spl/net/Messages/BorrowWishTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spl-net/src/main/java/bgu/spl/net/Messages/BorrowWishTo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spl-net/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spl-net/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spl-net/target/classes/bgu/spl/net/api/MessageEncoderDecoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spl-net/target/classes/bgu/spl/net/api/StompMessagingProtocol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spl-net/target/classes/bgu/spl/net/impl/echo/EchoClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spl-net/target/classes/bgu/spl/net/impl/echo/LineMessageEncoderDecoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spl-net/target/classes/bgu/spl/net/impl/newsfeed/NewsFeedServerMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spl-net/target/classes/bgu/spl/net/impl/rci/ObjectEncoderDecoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spl-net/target/classes/bgu/spl/net/impl/stomp/StompServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spl-net/target/classes/bgu/spl/net/srv/BaseServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spl-net/target/classes/bgu/spl/net/srv/BlockingConnectionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spl-net/target/classes/bgu/spl/net/srv/NonBlockingConnectionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spl-net/target/classes/bgu/spl/net/srv/Reactor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spl-net/target/classes/bgu/spl/net/srv/Reactor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spl-net/target/classes/bgu/spl/net/srv/Server$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spl-net/target/classes/bgu/spl/net/srv/Server.class" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,24 +74,24 @@
       <recent name="$PROJECT_DIR$/src/STOMP" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="127.0.0.1 7777" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -100,6 +108,7 @@
       <workItem from="1578749743410" duration="599000" />
       <workItem from="1578770770468" duration="5609000" />
       <workItem from="1578850334110" duration="1431000" />
+      <workItem from="1578913112458" duration="1875000" />
     </task>
     <task id="LOCAL-00001" summary="1.1st">
       <created>1578415582395</created>
@@ -115,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578773402722</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1e">
+      <created>1578915047827</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578915047827</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,7 +142,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -136,7 +154,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1.1st" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="1e" />
+    <option name="LAST_COMMIT_MESSAGE" value="1e" />
   </component>
   <component name="WindowStateProjectService">
     <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578773243552">
@@ -147,10 +166,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="694" y="357" width="589" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1578773505701" />
-    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2" timestamp="1578773402110">
+    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2" timestamp="1578915047296">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1578773402110" />
+    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1578915047296" />
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1578416120185">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -159,10 +178,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="698" y="270" width="580" height="564" key="MultipleFileMergeDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1578773423348" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1578776598268">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1578915050949">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1578776598268" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1578915050949" />
     <state x="761" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578773438010">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

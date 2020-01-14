@@ -1,9 +1,6 @@
 package bgu.spl.net.srv;
 
-import bgu.spl.net.Messages.Message;
 import bgu.spl.net.api.MessageEncDecImp;
-import bgu.spl.net.api.MessageEncoderDecoder;
-import bgu.spl.net.api.MessagingProtocol;
 import bgu.spl.net.api.StompMessagingProtocolImp;
 
 import java.io.IOException;
@@ -45,8 +42,12 @@ public abstract class BaseServer<T> implements Server<T> {
                         clientSock,
                         encdecFactory.get(),
                         protocol);
+
                 // adds the handler to Id-Handler map in ConnectionsImp and do the START
-                protocol.start(ConnectionsImp.getInstance().addHandler(handler),ConnectionsImp.getInstance());// TODO: to check
+                int connectionId = ConnectionsImp.getInstance().addHandler(handler);
+                DataBase.getInstance().getUsers().add(new User(null,null,connectionId,handler,null));
+                protocol.start(connectionId,ConnectionsImp.getInstance());
+
                 execute(handler);
             }
         } catch (IOException ex) {
