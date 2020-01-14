@@ -21,7 +21,7 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
                     frame = new SEND(headers,new String(bytes));
                     break;
                 case "CONNECT":
-                    frame = new CONNECT(headers,new String(bytes),null);
+                    frame = new CONNECT(null,headers,new String(bytes));
                     break;
                 case "SUBSCRIBE":
                     frame = new SUBSCRIBE(null,headers,new String(bytes));
@@ -95,10 +95,7 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
         return null;
     }
 
-//    @Override
-//    public byte[] encode(Frame message) {
-//        return new byte[0];
-//    }
+
     @Override
     public byte[] encode(Frame message) {
         String str;

@@ -5,7 +5,7 @@ import bgu.spl.net.srv.User;
 
 public class CONNECT extends Frame {
     private User currUser;
-    public CONNECT(String[] headers, String body,User currUser) {
+    public CONNECT(User currUser,String[] headers, String body) {
         super(headers, body);
         this.currUser=currUser;
     }
