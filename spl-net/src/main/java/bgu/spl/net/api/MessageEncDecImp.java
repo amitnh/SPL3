@@ -47,7 +47,6 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
                 command = new String(bytes);
                 bytes = new byte[1 << 10];
                 i=0;
-                // switc
                 state=1;
                 headers = new String[]{};
             }
