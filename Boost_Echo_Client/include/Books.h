@@ -6,14 +6,43 @@
 #define BOOST_ECHO_CLIENT_BOOKS_H
 
 
-class Books {
-private:
-    std::vector<std::string> Books;
+#include <vector>
+#include <iostream>
 
+using namespace std;
+class Book {
 public:
-    void Books::AddBook(String name);
-    void Books::RemoveBook(String name);
+    Book(string name, string lender,string genre, bool isAvailable);
+    const string &getName() const;
+    void setName(const string &name);
+    bool isAvailable1() const;
+    void setIsAvailable(bool isAvailable);
+    const string &getLender() const;
+    void setLender(const string &lender);
+    const string &getGenre() const;
+    void setGenre(const string &genre);
+    bool isAvailable2() const;
+
+private:
+    string name, lender , genre;
+    bool isAvailable;
 };
+
+
+
+class Books {
+public:
+    Books();
+    void addBook(Book book);
+    void removeBook(string name);
+    Book getBook(string name);
+    Books getBooksByGenre(string genre);
+
+protected:
+    vector<Book> books;//change to vector of arrays -[name,owner,isavailable]
+};
+
+
 
 
 #endif //BOOST_ECHO_CLIENT_BOOKS_H

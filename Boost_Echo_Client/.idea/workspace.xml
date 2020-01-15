@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated />
+    <generated>
+      <config projectName="Boost_Echo_Client" targetName="Boost_Echo_Client" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -9,23 +11,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="107e0c44-c664-4073-bdc1-909920ffe995" name="Default Changelist" comment="K">
-      <change afterPath="$PROJECT_DIR$/include/STOMPClient.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/STOMP/STOMPClient.cpp" afterDir="false" />
+    <list default="true" id="107e0c44-c664-4073-bdc1-909920ffe995" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Book.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/ConnectionHandlerImp.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/MessageEncDec.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Books.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Books.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/STOMP/Books.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/Books.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/Client.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/Client.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/ConnectionHandlerImp.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/Keyboard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/Keyboard.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/MessageEncDec.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/tempmain.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/connectionHandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/connectionHandler.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spl-net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spl-net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spl-net/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spl-net/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +28,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -72,11 +65,12 @@
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/STOMP" />
+      <recent name="$PROJECT_DIR$/include" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/STOMP" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/include" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -91,11 +85,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="CMake Application.Boost_Echo_Client">
     <configuration name="All Tests" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" nameIsGenerated="true" PROGRAM_PARAMS="127.0.0.1 7777" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Boost_Echo_Client" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="127.0.0.1 7777" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Boost_Echo_Client" TARGET_NAME="Boost_Echo_Client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Boost_Echo_Client" RUN_TARGET_NAME="Boost_Echo_Client">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="127.0.0.1 7777" PASS_PARENT_ENVS_2="true">
@@ -103,6 +102,10 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Boost.Test.All Tests" />
+      <item itemvalue="CMake Application.Boost_Echo_Client" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
@@ -122,7 +125,8 @@
       <workItem from="1578913112458" duration="1875000" />
       <workItem from="1579016667251" duration="6812000" />
       <workItem from="1579091511861" duration="2430000" />
-      <workItem from="1579096534422" duration="1895000" />
+      <workItem from="1579096534422" duration="1917000" />
+      <workItem from="1579098788345" duration="4320000" />
     </task>
     <task id="LOCAL-00001" summary="1.1st">
       <created>1578415582395</created>
@@ -145,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578915047827</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="K">
+      <created>1579098436013</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579098436013</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +180,8 @@
     <MESSAGE value="1.1st" />
     <MESSAGE value="1" />
     <MESSAGE value="1e" />
-    <option name="LAST_COMMIT_MESSAGE" value="1e" />
+    <MESSAGE value="K" />
+    <option name="LAST_COMMIT_MESSAGE" value="K" />
   </component>
   <component name="WindowStateProjectService">
     <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578773243552">
