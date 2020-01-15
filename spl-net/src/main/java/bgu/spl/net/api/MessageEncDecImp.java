@@ -136,7 +136,7 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
     }
     public void tests(){
 
-        String s = new String(encode(new SUBSCRIBE(null,new String[]{"5555"},"im sending message")));
+        String s = new String(encode(new SEND(new String[]{"5555"},"im sending message")));
         System.out.println(s);
         byte[] b = s.getBytes();
         while(!s.isEmpty()) {

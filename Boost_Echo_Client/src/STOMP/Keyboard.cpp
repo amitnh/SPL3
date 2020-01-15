@@ -16,10 +16,24 @@ void Keyboard() {
         std::string line(buf);
         int len = line.length();
 
-        if(len>0) {
-            //encode
-            MesseageEncDec.Decode(ConnectionHandlerImp.getFrame(line););
-        }
+
+            //MAKE STOMP FROM LINE
+
+
+
+            //ALREADY AS STOMP, SEND AS BYTES TO SERVER:
+
+
+
+            if (!connectionHandler.sendLine(line)) {
+                std::cout << "Disconnected. Exiting...\n" << std::endl;
+                break;
+            }
+
+
 
     }
 }
+
+
+

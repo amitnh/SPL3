@@ -9,7 +9,24 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="107e0c44-c664-4073-bdc1-909920ffe995" name="Default Changelist" comment="K" />
+    <list default="true" id="107e0c44-c664-4073-bdc1-909920ffe995" name="Default Changelist" comment="K">
+      <change afterPath="$PROJECT_DIR$/include/STOMPClient.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/STOMP/STOMPClient.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/ConnectionHandlerImp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/MessageEncDec.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/STOMP/Books.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/Books.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/STOMP/Client.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/STOMP/Client.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/STOMP/ConnectionHandlerImp.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/STOMP/Keyboard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/Keyboard.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/STOMP/MessageEncDec.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/STOMP/tempmain.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/connectionHandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/connectionHandler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spl-net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spl-net/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spl-net/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spl-net/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +54,7 @@
       </set>
     </option>
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectId" id="1W4iyzM1alamsusdXXJ6z9lObky" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -51,6 +69,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -73,6 +92,12 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="All Tests" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" nameIsGenerated="true" PROGRAM_PARAMS="127.0.0.1 7777" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="127.0.0.1 7777" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -80,7 +105,7 @@
     </configuration>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -96,7 +121,8 @@
       <workItem from="1578850334110" duration="1431000" />
       <workItem from="1578913112458" duration="1875000" />
       <workItem from="1579016667251" duration="6812000" />
-      <workItem from="1579091511861" duration="442000" />
+      <workItem from="1579091511861" duration="2430000" />
+      <workItem from="1579096534422" duration="1895000" />
     </task>
     <task id="LOCAL-00001" summary="1.1st">
       <created>1578415582395</created>
