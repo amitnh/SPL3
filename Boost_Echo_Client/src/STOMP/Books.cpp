@@ -77,6 +77,6 @@ bool Book::isAvailable2() const {
     return isAvailable;
 }
 
-Book::Book(string name, string lender, string genre, bool isAvailable) {
+Book::Book(string name, string lender, string genre, bool isAvailable):name{name},lender{lender},genre{genre},isAvailable{isAvailable} {
 
 }

@@ -12,11 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107e0c44-c664-4073-bdc1-909920ffe995" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/Book.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Books.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Books.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/STOMP/Books.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/Books.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -126,7 +121,7 @@
       <workItem from="1579016667251" duration="6812000" />
       <workItem from="1579091511861" duration="2430000" />
       <workItem from="1579096534422" duration="1917000" />
-      <workItem from="1579098788345" duration="4320000" />
+      <workItem from="1579098788345" duration="4454000" />
     </task>
     <task id="LOCAL-00001" summary="1.1st">
       <created>1578415582395</created>
@@ -156,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579098436013</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="dhof">
+      <created>1579103139943</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579103139943</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +183,8 @@
     <MESSAGE value="1" />
     <MESSAGE value="1e" />
     <MESSAGE value="K" />
-    <option name="LAST_COMMIT_MESSAGE" value="K" />
+    <MESSAGE value="dhof" />
+    <option name="LAST_COMMIT_MESSAGE" value="dhof" />
   </component>
   <component name="WindowStateProjectService">
     <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578773243552">
