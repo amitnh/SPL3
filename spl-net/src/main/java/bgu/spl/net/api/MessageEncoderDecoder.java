@@ -2,7 +2,7 @@ package bgu.spl.net.api;
 
 import bgu.spl.net.frames.Frame;
 
-public interface MessageEncoderDecoder{
+public interface MessageEncoderDecoder<T> {
 
     /**
      * add the next byte to the decoding process

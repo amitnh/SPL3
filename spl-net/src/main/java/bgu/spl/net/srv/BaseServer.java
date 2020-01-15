@@ -38,7 +38,7 @@ public abstract class BaseServer<T> implements Server<T> {
 
                 Socket clientSock = serverSock.accept();
                 StompMessagingProtocolImp protocol = protocolFactory.get();
-                BlockingConnectionHandler<T> handler = new BlockingConnectionHandler<>(
+                BlockingConnectionHandler handler = new BlockingConnectionHandler(
                         clientSock,
                         encdecFactory.get(),
                         protocol);
@@ -62,6 +62,6 @@ public abstract class BaseServer<T> implements Server<T> {
 			sock.close();
     }
 
-    protected abstract void execute(BlockingConnectionHandler<T>  handler);
+    protected abstract void execute(BlockingConnectionHandler  handler);
 
 }

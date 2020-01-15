@@ -1,15 +1,15 @@
 package bgu.spl.net.srv;
 
-import bgu.spl.net.Messages.Message;
 import bgu.spl.net.api.MessageEncDecImp;
 import bgu.spl.net.api.StompMessagingProtocolImp;
+import bgu.spl.net.frames.Frame;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 
-public class BlockingConnectionHandler<T> implements Runnable, ConnectionHandler<T> {
+public class BlockingConnectionHandler implements Runnable, ConnectionHandler {
 
     private final StompMessagingProtocolImp protocol;
     private final MessageEncDecImp encdec;
@@ -32,7 +32,7 @@ public class BlockingConnectionHandler<T> implements Runnable, ConnectionHandler
             out = new BufferedOutputStream(sock.getOutputStream());
 
             while (!protocol.shouldTerminate() && connected && (read = in.read()) >= 0) {
-                Message nextMessage = encdec.decodeNextByte((byte) read);
+                Frame nextMessage = encdec.decodeNextByte((byte) read);
                 if (nextMessage != null) {
                     protocol.process(nextMessage);
                 }
@@ -51,7 +51,7 @@ public class BlockingConnectionHandler<T> implements Runnable, ConnectionHandler
     }
 
     @Override
-    public void send(T msg) {
+    public void send(Frame msg) {
         if (msg != null)
         {
             try {

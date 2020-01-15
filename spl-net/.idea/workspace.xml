@@ -2,7 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b661f945-c916-4a76-9ec4-3fcb8be627a4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncoderDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncoderDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/StompMessagingProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/StompMessagingProtocol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/frames/CONNECTED.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/frames/CONNECTED.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/echo/LineMessageEncoderDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/echo/LineMessageEncoderDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/FetchNewsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/FetchNewsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/NewsFeedClientMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/NewsFeedClientMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/NewsFeedServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/NewsFeedServerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/PublishNewsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/newsfeed/PublishNewsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/rci/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/rci/ObjectEncoderDecoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/rci/RCIClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/rci/RemoteCommandInvocationProtocol.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/stomp/StompServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/stomp/StompServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/BaseServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/BaseServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/BlockingConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/BlockingConnectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/ConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/ConnectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/NonBlockingConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/NonBlockingConnectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/newsfeed/FetchNewsCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/newsfeed/NewsFeedClientMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/newsfeed/PublishNewsCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/rci/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/rci/RCIClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/net/impl/rci/RemoteCommandInvocationProtocol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/ConnectionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/ConnectionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/Connections.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bgu/spl/net/srv/Connections.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +95,7 @@
       <recent name="bgu.spl.net.Messages" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NewsFeedServerMain">
+  <component name="RunManager" selected="Application.StompServer">
     <configuration name="EchoClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bgu.spl.net.impl.echo.EchoClient" />
       <module name="spl-net" />
@@ -122,9 +150,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StompServer" />
         <item itemvalue="Application.NewsFeedServerMain" />
         <item itemvalue="Application.EchoClient" />
-        <item itemvalue="Application.StompServer" />
         <item itemvalue="Application.NewsFeedClientMain" />
       </list>
     </recent_temporary>
@@ -369,14 +397,18 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="214" width="800" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1578417304713" />
-    <state x="801" y="265" width="736" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1578934000541">
+    <state x="801" y="265" width="736" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1579092224358">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="801" y="265" width="736" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1578934000541" />
+    <state x="801" y="265" width="736" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1579092224358" />
     <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578756227911">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1578756227911" />
+    <state x="541" y="310" width="894" height="484" key="#org.jetbrains.debugger.memory.view.InstancesWindow" timestamp="1579093805931">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="541" y="310" width="894" height="484" key="#org.jetbrains.debugger.memory.view.InstancesWindow/67.27.1853.1053@67.27.1853.1053" timestamp="1579093805931" />
     <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2" timestamp="1579003228632">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -385,22 +417,38 @@
       <screen x="67" y="27" width="1853" height="930" />
     </state>
     <state x="776" y="249" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.930@67.27.1853.930" timestamp="1579006053685" />
-    <state width="1807" height="298" key="GridCell.Tab.0.bottom" timestamp="1578420321101">
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1579094898850">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="298" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1578420321101" />
-    <state width="1807" height="298" key="GridCell.Tab.0.center" timestamp="1578420321101">
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579094898850" />
+    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1579094898845">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="298" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1578420321101" />
-    <state width="1807" height="298" key="GridCell.Tab.0.left" timestamp="1578420321100">
+    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579094898845" />
+    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1579094898844">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="298" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1578420321100" />
-    <state width="1807" height="298" key="GridCell.Tab.0.right" timestamp="1578420321101">
+    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579094898844" />
+    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1579094898849">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="298" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1578420321101" />
+    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579094898849" />
+    <state width="1807" height="278" key="GridCell.Tab.1.bottom" timestamp="1579094899069">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579094899069" />
+    <state width="1807" height="278" key="GridCell.Tab.1.center" timestamp="1579094899063">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579094899063" />
+    <state width="1807" height="278" key="GridCell.Tab.1.left" timestamp="1579094899062">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579094899062" />
+    <state width="1807" height="278" key="GridCell.Tab.1.right" timestamp="1579094899064">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579094899064" />
     <state x="482" y="187" width="1024" height="845" key="SettingsEditor" timestamp="1578415547781">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -413,21 +461,36 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579003232408" />
+    <state width="926" height="527" key="XDebugger.FullValuePopup" timestamp="1579094651275">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="926" height="527" key="XDebugger.FullValuePopup/67.27.1853.1053@67.27.1853.1053" timestamp="1579094651275" />
     <state x="772" y="244" width="432" height="616" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578851064522">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="772" y="244" width="432" height="616" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1578851064522" />
-    <state x="761" y="472" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578926307371">
+    <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579091901670">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="761" y="472" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1578926307371" />
-    <state x="638" y="283" width="1096" height="784" key="find.popup" timestamp="1578933196340">
+    <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579091901670" />
+    <state x="638" y="283" width="1096" height="784" key="find.popup" timestamp="1579094611229">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="638" y="283" width="1096" height="784" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1578933196340" />
+    <state x="638" y="283" width="1096" height="784" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1579094611229" />
     <state x="738" y="181" width="500" height="743" key="refactoring.ChangeSignatureDialog" timestamp="1578919329475">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="738" y="181" width="500" height="743" key="refactoring.ChangeSignatureDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1578919329475" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncDecImp.java</url>
+          <line>146</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

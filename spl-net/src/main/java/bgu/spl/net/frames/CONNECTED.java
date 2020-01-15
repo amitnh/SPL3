@@ -10,6 +10,11 @@ public class CONNECTED extends Frame {
         this.connectionId=connectionId;
     }
 
+    public CONNECTED(String[] headers, String body, int connectionId) {
+        super(headers, body);
+        this.connectionId = connectionId;
+    }
+
     @Override
     public void process() {
         ConnectionsImp.getInstance().send(connectionId,this);

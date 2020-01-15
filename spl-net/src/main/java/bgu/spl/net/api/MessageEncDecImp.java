@@ -12,25 +12,31 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
     private String[] headers;
     private int headersIndex=0;
     private String command;
+    private int maxHeaders=4;
+    private  Frame frmtst;
+    public MessageEncDecImp() {
+    }
+
     @Override
     public Frame decodeNextByte(byte nextByte) {
         if (nextByte=='\u0000')
         {
+            String body = new String(bytes).trim();
             switch (command){
                 case "SEND":
-                    frame = new SEND(headers,new String(bytes));
+                    frame = new SEND(headers,body);
                     break;
                 case "CONNECT":
-                    frame = new CONNECT(null,headers,new String(bytes));
+                    frame = new CONNECT(null,headers,body);
                     break;
                 case "SUBSCRIBE":
-                    frame = new SUBSCRIBE(null,headers,new String(bytes));
+                    frame = new SUBSCRIBE(null,headers,body);
                     break;
                 case "UNSUBSCRIBE":
-                    frame = new UNSUBSCRIBE(null,headers,new String(bytes));
+                    frame = new UNSUBSCRIBE(null,headers,body);
                     break;
                 case "DISCONNECT":
-                    frame = new DISCONNECT(headers,new String(bytes));
+                    frame = new DISCONNECT(headers,body);
                     break;
             }
             bytes= new byte[1 << 10];
@@ -44,11 +50,11 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
         {
             if (nextByte=='\n')
             {
-                command = new String(bytes);
+                command = new String(bytes).trim();
                 bytes = new byte[1 << 10];
                 i=0;
                 state=1;
-                headers = new String[]{};
+                headers = new String[maxHeaders];
             }
             else
             {
@@ -60,13 +66,13 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
         {
             if(nextByte=='\n') // end of line
             {
-                if (bytes[i-1]=='\n')
+                if ((i!=0)&&(bytes[i-1]=='\n'))
                 {
                     state=2; // going to body state
                 }
                 else if(isHeader) // headline or the data ?
                 {
-                    headers[headersIndex]=new String(bytes);
+                    headers[headersIndex]=new String(bytes).trim();
                     headersIndex++;
                     bytes = new byte[1 << 10];
                     i=0;
@@ -99,7 +105,7 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
     public byte[] encode(Frame message) {
         String str;
         String frameClass;
-        int last= message.getClass().toString().lastIndexOf('.');// TODO:check
+        int last= message.getClass().toString().lastIndexOf('.')+1;//
         frameClass = message.getClass().toString().substring(last);
         str = frameClass;
         str += "\n";
@@ -109,14 +115,14 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
                 break;
             case "CONNECTED":
                 str+= "accept-version:" + message.getHeaders()[0];
-                str+= "host:" + message.getHeaders()[1];
-                str+= "login:" + message.getHeaders()[2];
-                str+= "passcode:" + message.getHeaders()[3];
+                str+= "\nhost:" + message.getHeaders()[1];
+                str+= "\nlogin:" + message.getHeaders()[2];
+                str+= "\npasscode:" + message.getHeaders()[3];
                 break;
             case "ERRORfrm":
                 if(message.getHeaders()[0]!="")
                     str+= "receipt-id:" + message.getHeaders()[0];
-                str+= "message: " + message.getHeaders()[1];
+                str+= "\nmessage: " + message.getHeaders()[1];
                 break;
             case "SEND":
                 str+= "destination:" + message.getHeaders()[0];
@@ -127,6 +133,18 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
         str +="\u0000";
 
         return str.getBytes(); //uses utf8 by default
+    }
+    public void tests(){
+
+        String s = new String(encode(new SUBSCRIBE(null,new String[]{"5555"},"im sending message")));
+        System.out.println(s);
+        byte[] b = s.getBytes();
+        while(!s.isEmpty()) {
+            frmtst = this.decodeNextByte(b[0]);
+            s= s.substring(1);
+            b= s.getBytes();
+        }
+        s=s;
     }
 
 

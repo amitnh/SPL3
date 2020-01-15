@@ -1,6 +1,5 @@
 package bgu.spl.net.api;
 
-import bgu.spl.net.Messages.Message;
 import bgu.spl.net.frames.Frame;
 import bgu.spl.net.srv.Connections;
 import bgu.spl.net.srv.ConnectionsImp;

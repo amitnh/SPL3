@@ -9,18 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="107e0c44-c664-4073-bdc1-909920ffe995" name="Default Changelist" comment="K">
-      <change afterPath="$PROJECT_DIR$/include/Keyboard.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/STOMP/Client.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/STOMP/Client.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/STOMP/Keyboard.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/Books.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/Books.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/MessageEncDec.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/MessageEncDec.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/tempmain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/tempmain.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spl-net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spl-net/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="107e0c44-c664-4073-bdc1-909920ffe995" name="Default Changelist" comment="K" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +96,7 @@
       <workItem from="1578850334110" duration="1431000" />
       <workItem from="1578913112458" duration="1875000" />
       <workItem from="1579016667251" duration="6812000" />
+      <workItem from="1579091511861" duration="442000" />
     </task>
     <task id="LOCAL-00001" summary="1.1st">
       <created>1578415582395</created>
