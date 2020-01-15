@@ -7,6 +7,7 @@
 #include <connectionHandler.h>
 #include <Books.h>
 #include <MessageEncDec.h>
+#include "../include/Keyboard.h"
 
 /**
 * This code assumes that the server replies the exact text the client sent it (as opposed to the practical session example)
@@ -15,7 +16,7 @@
 public static boolean terminate=false;
 public Books mybooks = new Books();
 
-int main (int argc, char *argv[]) {
+int STOMPClient::main(int argc, char **argv) {
     if (argc < 3) {
         std::cerr << "Usage: " << argv[0] << " host port" << std::endl << std::endl;
         return -1;
@@ -23,18 +24,18 @@ int main (int argc, char *argv[]) {
     std::string host = argv[1];
     short port = atoi(argv[2]);
 
-    connectionHandler connectionHandler(host, port);
-    if (!connectionHandler.connect()) {
+    connectionHandler handler(host, port);
+    if (!handler.connect()) {
         std::cerr << "Cannot connect to " << host << ":" << port << std::endl;
         return 1;
     }
     std::cout<<"connected to server"<<std::endl;
 
-    thread::thread keyboard(Keyboard);
+    thread::thread keyboard(Keyboard::process(handler));
 
     While(!terminate)
     {
-        if (!connectionHandler.getLine(answer)) {
+        if (!handler.getLine(answer)) {
             std::cout << "Disconnected. Exiting...\n" << std::endl;
             break;
         }

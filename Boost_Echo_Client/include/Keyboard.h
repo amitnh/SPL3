@@ -6,7 +6,11 @@
 #define BOOST_ECHO_CLIENT_KEYBOARD_H
 
 
+#include "connectionHandler.h"
+
 class Keyboard {
+public:
+    void process(ConnectionHandler handler);
 
 };
 
