@@ -57,19 +57,17 @@ int main(int argc, char **argv) {
         {
             STOMPClient::getUntilDelimiter(':'); // to the trash, its the header name
             string receiptId = STOMPClient::getUntilDelimiter('\n');
-            if (to_string(disconnectFlag)==receiptId)
-                terminate=true;// TODO: close keyboard and check the receipt id
+            //if (to_string(disconnectFlag)==receiptId)
+                //terminate=true;// TODO: close keyboard and check the receipt id
         }
-        else if (command=="SEND")
-        {
+        else if (command=="SEND") {
             STOMPClient::getUntilDelimiter(':'); // to the trash, its the header name
             string genre = STOMPClient::getUntilDelimiter('\n');
             STOMPClient::getUntilDelimiter('\n');
             string body = answer;
-            if(body=="book status")
-            {
+            if (body == "book status") {
                 Books toSend = mybooks->getBooksByGenre(genre);
-                if(!toSend.getAllBooks().empty()) {
+                if (!toSend.getAllBooks().empty()) {
                     stompframe = "SEND"
                                  "\ndestination:" + genre +
                                  "\n"
@@ -81,44 +79,52 @@ int main(int argc, char **argv) {
                     stompframe += "\n\0";
                 }
 
-            }
-            else{ // no book status
-                string user= STOMPClient::getUntilDelimiter(' ');
-                if (answer.substr(0,4)=="wish")//  "wish to borrow {book name}")
+            } else { // no book status
+                string user = STOMPClient::getUntilDelimiter(' ');
+                if (answer.substr(0, 4) == "wish")//  "wish to borrow {book name}")
                 {
                     STOMPClient::getUntilDelimiter(' ');// wish
                     STOMPClient::getUntilDelimiter(' ');// to
                     STOMPClient::getUntilDelimiter(' ');// borrow
-                    string bookName= answer;
+                    string bookName = answer;
                     //if i have it SEND {username} has {book name}
-                    for (Book b:mybooks->getBooksByGenre(genre).getAllBooks())
-                    {
-                        if (b.getName()==bookName)
-                        {
-                            stompframe="SEND"
-                                       "\ndestination:"+genre+
-                                       "\n"
-                                       + mybooks->getMyname() + " has " + bookName;
+                    for (Book b:mybooks->getBooksByGenre(genre).getAllBooks()) {
+                        if (b.getName() == bookName) {
+                            stompframe = "SEND"
+                                         "\ndestination:" + genre +
+                                         "\n"
+                                         + mybooks->getMyname() + " has " + bookName;
                         }
                     }
-                }
-                else // "has {book name}-some else has it
+                } else if (answer.substr(0, 3) == "has")// "has {book name}-some else has it
                 {
                     STOMPClient::getUntilDelimiter(' ');// has
-                    string bookName= answer; // {book name}
+                    string bookName = answer; // {book name}
                     for (Book b:mybooks->getBooksiAskedFor()) {
                         if (b.getName() == bookName) {
                             //SEND Taking {book name} from {book owner username}
                             stompframe = "SEND"
                                          "\ndestination:" + genre +
-                                         "\n\nTaking" + bookName + " from " + user;
+                                         "\n\nTaking " + bookName + " from " + user;
                             mybooks->addBook(*(new Book(bookName, user, genre, true)));
                             mybooks->removeAskedBook(b);
                             break;
                         }
                     }
+                } else { //Taking {book name} from {book owner username}
+                    string bookName = STOMPClient::getUntilDelimiter(' ');//  {book name}
+                    STOMPClient::getUntilDelimiter(' ');// from
+                    string owner = STOMPClient::getUntilDelimiter(' ');//  {book owner}
+                    if(mybooks->myname==owner)
+                    {
+                        if(mybooks->getBook(bookName).getLender()==mybooks->getMyname())// if im the original owner
+                            mybooks->getBook(bookName).setIsAvailable(false);
+                        else
+                            mybooks->removeBook(bookName);
+                    }
                 }
             }
+
 
         }
         else if (command=="CONNECTED")
@@ -141,7 +147,7 @@ int main(int argc, char **argv) {
 string STOMPClient::getUntilDelimiter(char del) {
     int i = answer.find_first_of(del);
     string toReturn = answer.substr(0,i);
-    answer.substr(i+1);
+    answer = answer.substr(i+1);
     return toReturn;
 }
 

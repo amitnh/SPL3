@@ -10,21 +10,21 @@ public class StompServer {
     public static void main(String[] args) {
 //        MessageEncDecImp test = new MessageEncDecImp();
 //        test.tests();
-        if(args[1]=="tpc") //
+        if(args[1].equals("tpc")) //
         Server.threadPerClient(
+                7777, //port
+                new StompMessagingProtocolImp(), //protocol factory
+                new MessageEncDecImp()//message encoder decoder factory
+        ).serve();
+        else if (args[1]=="reactor")
+        Server.reactor(
+                Runtime.getRuntime().availableProcessors(),
                 Integer.getInteger(args[0]), //port
                 new StompMessagingProtocolImp(), //protocol factory
                 new MessageEncDecImp()//message encoder decoder factory
         ).serve();
-//        else if (args[1]=="reactor")
-//        Server.reactor(
-//                Runtime.getRuntime().availableProcessors(),
-//                Integer.getInteger(args[0]), //port
-//                new StompMessagingProtocolImp(), //protocol factory
-//                new MessageEncDecImp()//message encoder decoder factory
-//        ).serve();
-//        else
-//            System.out.println("Wrong args");
+        else
+            System.out.println("Wrong args");
 
     }
 

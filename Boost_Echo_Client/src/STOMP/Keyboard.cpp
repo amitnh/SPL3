@@ -94,7 +94,7 @@ public:
                 string genre = line.substr(0, spaceindex); ///genre
                 line = line.substr(spaceindex + 1);       ///line=book name
 
-                Book *book = new Book(line, "myself", genre, true);
+                Book *book = new Book(line, mybooks->getMyname(), genre, true);
                 mybooks->addBook(*book);
 
             }
@@ -127,9 +127,13 @@ public:
 
 
             if(firstword=="books")
-                for(auto x :mybooks->getAllBooks())
-                    cout<<x.getName()<<endl;
-
+                for(auto x :mybooks->getAllBooks()) {
+                    if(x.isAvailable1())
+                    cout << "book name:" + x.getName() + " available. lender:" +x.getLender() << endl;
+                    else
+                        cout << "book name:" + x.getName() + " not Available. lender:" +
+                                x.getLender() << endl;
+                }
 
             //ALREADY AS STOMP, SEND AS BYTES TO SERVER:
             if(stompframe.size()>0) {
