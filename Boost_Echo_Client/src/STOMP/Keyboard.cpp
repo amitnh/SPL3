@@ -51,21 +51,26 @@ public:
             //now checking for command:
             if (firstword == "login") {
                 spaceindex = line.find_first_of(' ');
-                string hostport = line.substr(0, spaceindex);
+                string hostport = line.substr(0, spaceindex);//host:port
                 line = line.substr(spaceindex + 1);
 
                 spaceindex = line.find_first_of(' ');
-                string loginName = line.substr(0, spaceindex);
+                string loginName = line.substr(0, spaceindex);//login name
                 line = line.substr(spaceindex + 1);
 
                 spaceindex = line.find_first_of(' ');
-                string passcode = line.substr(0, spaceindex);
+                string passcode = line.substr(0, spaceindex); //passcode
                 line = line.substr(spaceindex + 1);
 
                 myname = loginName;
                 mybooks->setMyname(myname);
-                stompframe = "CONNECT\naccept-version:1.2\nhost:" + hostport + "\nlogin:" + loginName + "\npasscode:" +
-                             passcode + "\n\n\0";
+                stompframe = "CONNECT\n"
+                             "accept-version:1.2\n"
+                             "host:" + hostport +
+                             "\nlogin:" + loginName +
+                             "\npasscode:" +
+                             passcode +
+                             "\n\n\0";
 
             }
             if (firstword == "join") {
@@ -92,9 +97,9 @@ public:
 
                 Book *book = new Book(line, "myself", genre, true);
                 mybooks->addBook(*book);
-                for(auto x :mybooks->getAllBooks())
-                    cout<<x.getName()<<endl;
+
             }
+
 
 
             if (firstword == "borrow") {
@@ -121,12 +126,16 @@ public:
                 receiptnumber++;
             }
 
+
+            if(firstword=="books")
+                for(auto x :mybooks->getAllBooks())
+                    cout<<x.getName()<<endl;
             cout<<stompframe+"@"<<endl;
             //ALREADY AS STOMP, SEND AS BYTES TO SERVER:
-//            if (!handler->sendLine(stompframe)) {
-//                std::cout << "Disconnected. Exiting...\n" << std::endl;
-//                terminate = true;
-//            }
+            if (!handler->sendLine(stompframe)) {
+                std::cout << "Disconnected. Exiting...\n" << std::endl;
+                terminate = true;
+            }
 
 
         }
