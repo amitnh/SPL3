@@ -1,16 +1,4 @@
-/users/studs/bsc/2020/kapelnik/clion-2019.3.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /users/studs/bsc/2020/kapelnik/Desktop/SPL3/Boost_Echo_Client
+/users/studs/bsc/2020/amitnag/Desktop/CLion-2019.2.5/clion-2019.2.5/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /users/studs/bsc/2020/amitnag/Desktop/SPL3/Boost_Echo_Client
 -- Configuring done
-CMake Error at CMakeLists.txt:8 (add_executable):
-  Cannot find source file:
-
-    src/STOMPClient.cpp
-
-  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
-  .hpp .hxx .in .txx
-
-
-CMake Error at CMakeLists.txt:8 (add_executable):
-  No SOURCES given to target: STOMPClient.cpp
-
-
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+-- Generating done
+-- Build files have been written to: /users/studs/bsc/2020/amitnag/Desktop/SPL3/Boost_Echo_Client/cmake-build-debug

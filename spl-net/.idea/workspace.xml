@@ -4,18 +4,9 @@
     <list default="true" id="b661f945-c916-4a76-9ec4-3fcb8be627a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/include/ConnectionHandlerImp.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/include/MessageEncDec.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/Books.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/Books.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/Client.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/Client.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/Client.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/include/Client.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/ConnectionHandlerImp.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/Keyboard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/Keyboard.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/MessageEncDec.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/tempmain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/tempmain.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/src/connectionHandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/connectionHandler.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/stomp/StompServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/stomp/StompServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +114,7 @@
     <configuration name="StompServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bgu.spl.net.impl.stomp.StompServer" />
       <module name="spl-net" />
+      <option name="PROGRAM_PARAMETERS" value="127.0.0.1 7777" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="bgu.spl.net.impl.stomp.*" />
@@ -133,6 +125,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.EchoClient" />
+      <item itemvalue="Application.NewsFeedClientMain" />
+      <item itemvalue="Application.NewsFeedServerMain" />
+      <item itemvalue="Application.StompServer" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.StompServer" />
@@ -171,6 +169,7 @@
       <workItem from="1578749751130" duration="16284000" />
       <workItem from="1578906310780" duration="7878000" />
       <workItem from="1578915165393" duration="18505000" />
+      <workItem from="1579171428117" duration="1179000" />
     </task>
     <task id="LOCAL-00001" summary="1st">
       <created>1578415564167</created>
@@ -390,6 +389,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="214" width="800" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1578417304713" />
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579173448865">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579173448865" />
     <state x="801" y="265" width="736" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1579092224358">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -410,22 +413,22 @@
       <screen x="67" y="27" width="1853" height="930" />
     </state>
     <state x="776" y="249" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.930@67.27.1853.930" timestamp="1579006053685" />
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1579095049970">
+    <state width="1807" height="298" key="GridCell.Tab.0.bottom" timestamp="1579173461031">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579095049970" />
-    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1579095049969">
+    <state width="1807" height="298" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579173461031" />
+    <state width="1807" height="298" key="GridCell.Tab.0.center" timestamp="1579173461030">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579095049969" />
-    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1579095049968">
+    <state width="1807" height="298" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579173461030" />
+    <state width="1807" height="298" key="GridCell.Tab.0.left" timestamp="1579173461030">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579095049968" />
-    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1579095049970">
+    <state width="1807" height="298" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579173461030" />
+    <state width="1807" height="298" key="GridCell.Tab.0.right" timestamp="1579173461031">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579095049970" />
+    <state width="1807" height="298" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579173461031" />
     <state width="1807" height="278" key="GridCell.Tab.1.bottom" timestamp="1579095050122">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
