@@ -13,7 +13,7 @@
 using namespace std;
 
 //eyboard thread
-void Keyboard::process(ConnectionHandler handler, Books books, string name) {
+void Keyboard::process(ConnectionHandler handler, Books books) {
     const short bufsize = 1024;
     int id = 0;
     int receiptnumber = 0;
@@ -64,7 +64,8 @@ void Keyboard::process(ConnectionHandler handler, Books books, string name) {
             genreIdMap[genre] = id;
         }
         if (firstword == "exit") {
-            string genre; // TODO: tal put here the genre
+            string genre = line;
+
             stompframe = "UNSUBSCRIBE\n"+ to_string(genreIdMap[genre]) + "\n\n\0";
             genreIdMap.erase(genre); // deletes it from the map
         }
