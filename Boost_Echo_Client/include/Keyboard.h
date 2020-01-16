@@ -9,11 +9,5 @@
 #include "ConnectionHandler.h"
 #include "Books.h"
 
-class Keyboard {
-public:
-    void process(ConnectionHandler handler, Books books);
-
-};
-
 
 #endif //BOOST_ECHO_CLIENT_KEYBOARD_H

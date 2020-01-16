@@ -6,19 +6,19 @@
 #include <stdlib.h>
 #include <ConnectionHandler.h>
 #include <Books.h>
-#include "Keyboard.h"
+#include "Keyboard.cpp"
 
 #include <thread>
 #include <iostream>
+#include <mutex>
 /**
 * This code assumes that the server replies the exact text the client sent it (as opposed to the practical session example)
 */
 using namespace std;
-Books* mybooks = new Books();
+Books* mybooks;
 string answer;
 int disconnectFlag=0;
 int main(int argc, char **argv) {
-
     bool terminate = false;
     if (argc < 3) {
         std::cerr << "Usage: " << argv[0] << " host port" << std::endl << std::endl;
@@ -33,7 +33,10 @@ int main(int argc, char **argv) {
         return 1;
     }
     std::cout<<"connected to server"<<std::endl;
-    //thread::thread Keyboard(Keyboard::process(handler,mybooks));
+    std::mutex mutex;
+    Keyboard task1(handler,mybooks, mutex);
+    std::thread th1(&Keyboard::process, &task1);
+    mybooks= new Books();
 
     while(!terminate)
     {

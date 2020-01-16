@@ -12,7 +12,7 @@ public:
 int main(int argc, char *argv[]);
 static std::string getUntilDelimiter(char del);
 
-    void setDisconnectFlag(int disconnectFlag);
+    static void setDisconnectFlag(int disconnectFlag);
 };
 
 

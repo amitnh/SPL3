@@ -36,11 +36,17 @@ public:
     void addBook(Book book);
     void removeBook(string name);
     Book getBook(string name);
+    const string &getMyname() const;
+    void setMyname(const string &myname);
     Books getBooksByGenre(string genre);
     vector<Book> getAllBooks();
+    void addAskedBook(Book book);
+    void removeAskedBook(Book book);
 
 
 protected:
+    vector<Book> booksiAskedFor;
+    string myname;
     vector<Book> books;//change to vector of arrays -[name,owner,isavailable]
 };
 

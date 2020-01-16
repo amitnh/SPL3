@@ -40,9 +40,25 @@ Books Books::getBooksByGenre(string genre){
     return booksByGenre;
 }
 
+const string &Books::getMyname() const {
+    return myname;
+}
 
-
-
+void Books::setMyname(const string &myname) {
+    Books::myname = myname;
+}
+void Books::addAskedBook(Book book){
+    booksiAskedFor.push_back(book);
+}
+void Books::removeAskedBook(Book book){
+    int i=0;
+    for(auto x:booksiAskedFor)
+        if(x.getName()==book.getName()){
+            booksiAskedFor.erase(booksiAskedFor.begin()+i);
+            i+=1;
+        }
+    booksiAskedFor.push_back(book);
+}
 
 //-------------BOOK----------------
 const string &Book::getName() const {
