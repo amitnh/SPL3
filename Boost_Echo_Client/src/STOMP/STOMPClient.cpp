@@ -69,7 +69,7 @@ int main(int argc, char **argv) {
             string body = answer;
             if(body=="book status")
             {
-                Book toSend = mybooks.getBooksByGenre(genre);
+                Books toSend = mybooks.getBooksByGenre(genre);
                 stompframe="SEND"
                            "\ndestination:"+genre+
                            "\n" +
@@ -79,6 +79,8 @@ int main(int argc, char **argv) {
                 {
                     stompframe += n + ",";
                 }
+                stompframe.substr(0,stompframe.length()-2); //TODO: check the sizes
+                stompframe+= '\0';
 
             }
 
