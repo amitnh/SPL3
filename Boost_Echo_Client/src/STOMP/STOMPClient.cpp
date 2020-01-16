@@ -15,9 +15,13 @@
 */
 using namespace std;
 Books* mybooks = new Books();
+string answer;
 
 int main(int argc, char **argv) {
+    if(1<2) {
 
+    }
+    bool terminate = false;
     if (argc < 3) {
         std::cerr << "Usage: " << argv[0] << " host port" << std::endl << std::endl;
         return -1;
@@ -36,7 +40,8 @@ int main(int argc, char **argv) {
 
     while(!terminate)
     {
-        string answer;
+        string stompframe;
+        answer = "";
         if (!handler.getLine(answer)) {
             std::cout << "Disconnected. Exiting...\n" << std::endl;
             break;
@@ -46,56 +51,54 @@ int main(int argc, char **argv) {
         // A C string must end with a 0 char delimiter.  When we filled the answer buffer from the socket
         // we filled up to the \n char - we must make sure now that a 0 char is also present. So we truncate last character.
         answer.resize(len - 1);
-        string command;
         if (answer == "bye") {
-            command = getUntilDelimiter(*answer, '\n');
-            if (command == "bye") {
-                std::cout << "Exiting...\n" << std::endl;
-                break;
-            }
+        string command = STOMPClient::getUntilDelimiter('\n');
+        if (command == "bye") {
+            std::cout << "Exiting...\n" << std::endl;
+            break;
         }
         else if (command=="RECEIPT")
         {
-            getUntilDelimiter(*answer,':'); // to the trash, its the header name
-            string receiptId = getUntilDelimiter(*answer,'\n');
+            STOMPClient::getUntilDelimiter(':'); // to the trash, its the header name
+            string receiptId = STOMPClient::getUntilDelimiter('\n');
             if (disconnectFlag)
                 terminate=true;// TODO: close keyboard and check the receipt id
         }
         else if (command=="SEND")
         {
-            getUntilDelimiter(*answer,':'); // to the trash, its the header name
-            string genre = getUntilDelimiter(*answer,'\n');
-            getUntilDelimiter(*answer,'\n');
+           STOMPClient::getUntilDelimiter(':'); // to the trash, its the header name
+            string genre = STOMPClient::getUntilDelimiter('\n');
+            STOMPClient::getUntilDelimiter('\n');
             string body = answer;
             if(body=="book status")
             {
-                Books toSend = mybooks.getBooksByGenre(genre);
+                Books toSend = mybooks->getBooksByGenre(genre);
                 stompframe="SEND"
                            "\ndestination:"+genre+
                            "\n"
                             //TODO: get my name
-                            + ":");
-                for(name n:toSend.getName())
+                            + ":";
+                for(Book b:toSend.getAllBooks())
                 {
-                    stompframe += n + ",";
+                    stompframe += b.getName() + ",";
                 }
-                stompframe.substr(0,stompframe.length()-2); //TODO: check the sizes
-                stompframe+= '\0';
+                stompframe.substr(0,stompframe.length()-2); //removes the last comma TODO: check the sizes
+                stompframe+= "\n\0";
 
             }
 
 
         }
+
     }
-
     return 0;
-
+}
 }
 
-string STOMPClient::getUntilDelimiter(string *s, char del) { // updates s and
-    int i = s->find_first_of(del);
-    string toReturn = s->substr(0,i);
-    s->substr(i+1);
+string STOMPClient::getUntilDelimiter(char del) {
+    int i = answer.find_first_of(del);
+    string toReturn = answer.substr(0,i);
+    answer.substr(i+1);
     return toReturn;
 }
 

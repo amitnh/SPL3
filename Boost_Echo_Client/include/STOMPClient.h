@@ -10,7 +10,7 @@
 class STOMPClient {
 public:
 int main(int argc, char *argv[]);
-std::string getUntilDelimiter(std::string *s,char del);
+static std::string getUntilDelimiter(char del);
 
 };
 
