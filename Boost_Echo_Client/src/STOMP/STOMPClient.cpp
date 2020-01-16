@@ -69,8 +69,7 @@ int main(int argc, char **argv) {
                     stompframe = "SEND"
                                  "\ndestination:" + genre +
                                  "\n"
-                                 //TODO: get my name
-                                 + ":";
+                                 + mybooks->getMyname() + ":";
                     for (Book b:toSend.getAllBooks()) {
                         stompframe += b.getName() + ",";
                     }
@@ -95,8 +94,7 @@ int main(int argc, char **argv) {
                             stompframe="SEND"
                                        "\ndestination:"+genre+
                                        "\n"
-                                       //TODO: get my K
-                                       + " has " + bookName;
+                                       + mybooks->getMyname() + " has " + bookName;
                         }
                     }
                 }

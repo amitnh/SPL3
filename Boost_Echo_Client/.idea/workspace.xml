@@ -13,10 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="107e0c44-c664-4073-bdc1-909920ffe995" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Books.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Books.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Keyboard.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Keyboard.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/Books.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/Books.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/Keyboard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/Keyboard.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/STOMP/STOMPClient.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/STOMPClient.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +127,7 @@
       <workItem from="1579171245939" duration="4135000" />
       <workItem from="1579178705549" duration="1194000" />
       <workItem from="1579179936661" duration="673000" />
-      <workItem from="1579186073129" duration="2071000" />
+      <workItem from="1579186073129" duration="2253000" />
     </task>
     <task id="LOCAL-00001" summary="1.1st">
       <created>1578415582395</created>
@@ -217,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579186232357</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="protocol done with no debugging">
+      <created>1579188172479</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1579188172479</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +251,8 @@
     <MESSAGE value="a little bit of keyboard" />
     <MESSAGE value="commit to tal" />
     <MESSAGE value="stomp protocol" />
-    <option name="LAST_COMMIT_MESSAGE" value="stomp protocol" />
+    <MESSAGE value="protocol done with no debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="protocol done with no debugging" />
   </component>
   <component name="WindowStateProjectService">
     <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579175092244">
@@ -263,10 +267,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="801" y="271" width="465" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1579187517679" />
-    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2" timestamp="1579186231611">
+    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2" timestamp="1579188171703">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579186231611" />
+    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579188171703" />
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1578416120185">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -295,10 +299,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="698" y="270" width="580" height="564" key="MultipleFileMergeDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579187026682" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579186245190">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579188175281">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579186245190" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579188175281" />
     <state x="761" y="472" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579187078369">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
