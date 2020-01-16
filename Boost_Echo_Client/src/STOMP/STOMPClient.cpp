@@ -44,17 +44,8 @@ int main(int argc, char **argv) {
             break;
         }
 
-        int len = answer.length();
-        // A C string must end with a 0 char delimiter.  When we filled the answer buffer from the socket
-        // we filled up to the \n char - we must make sure now that a 0 char is also present. So we truncate last character.
-        answer.resize(len - 1);
-        if (answer == "bye") {
         string command = STOMPClient::getUntilDelimiter('\n');
-        if (command == "bye") {
-            std::cout << "Exiting...\n" << std::endl;
-            break;
-        }
-        else if (command=="RECEIPT")
+        if (command=="RECEIPT")
         {
             STOMPClient::getUntilDelimiter(':'); // to the trash, its the header name
             string receiptId = STOMPClient::getUntilDelimiter('\n');
@@ -63,28 +54,68 @@ int main(int argc, char **argv) {
         }
         else if (command=="SEND")
         {
-           STOMPClient::getUntilDelimiter(':'); // to the trash, its the header name
+            STOMPClient::getUntilDelimiter(':'); // to the trash, its the header name
             string genre = STOMPClient::getUntilDelimiter('\n');
             STOMPClient::getUntilDelimiter('\n');
             string body = answer;
             if(body=="book status")
             {
                 Books toSend = mybooks->getBooksByGenre(genre);
-                stompframe="SEND"
-                           "\ndestination:"+genre+
-                           "\n"
-                            //TODO: get my name
-                            + ":";
-                for(Book b:toSend.getAllBooks())
-                {
-                    stompframe += b.getName() + ",";
+                if(!toSend.getAllBooks().empty()) {
+                    stompframe = "SEND"
+                                 "\ndestination:" + genre +
+                                 "\n"
+                                 //TODO: get my name
+                                 + ":";
+                    for (Book b:toSend.getAllBooks()) {
+                        stompframe += b.getName() + ",";
+                    }
+                    stompframe.substr(0, stompframe.length() - 1); //removes the last comma TODO: check the sizes
+                    stompframe += "\n\0";
                 }
-                stompframe.substr(0,stompframe.length()-2); //removes the last comma TODO: check the sizes
-                stompframe+= "\n\0";
 
             }
+            else{ // no book status
+                string user= STOMPClient::getUntilDelimiter(' ');
+                if (answer.substr(0,4)=="wish")//  "wish to borrow {book name}")
+                {
+                    STOMPClient::getUntilDelimiter(' ');// wish
+                    STOMPClient::getUntilDelimiter(' ');// to
+                    STOMPClient::getUntilDelimiter(' ');// borrow
+                    string bookName= answer;
+                    //if i have it SEND {username} has {book name}
+                    for (Book b:mybooks->getBooksByGenre(genre).getAllBooks())
+                    {
+                        if (b.getName()==bookName)
+                        {
+                            stompframe="SEND"
+                                       "\ndestination:"+genre+
+                                       "\n"
+                                       //TODO: get my name
+                                       + " has " + bookName;
+                        }
+                    }
+                }
+                else // "has {book name}-some else has it
+                {
+                    STOMPClient::getUntilDelimiter(' ');// has
+                    string bookName= answer; // {book name}
+                    if (booksiAskedFor== bookName)
+                    {
+                        //SEND Taking {book name} from {book owner username}
+                        stompframe="SEND"
+                                   "\ndestination:"+genre+
+                                   "\n\nTaking" + bookName + " from " + user;
 
+                        mybooks->addBook(*(new Book(bookName,user,genre,true)));
+                    }
+                }
+            }
 
+        }
+        else if (command=="CONNECTED")
+        {
+            cout<<"Login successful"<<endl;
         }
 
     }
