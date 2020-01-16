@@ -4,7 +4,9 @@
 
 #include "../include/Keyboard.h"
 #include "../include/connectionHandler.h"
-
+#include <unordered_map>
+#include <iostream>
+#include <cassert>
 using namespace std;
 
 //eyboard thread
@@ -12,6 +14,7 @@ void Keyboard::process(ConnectionHandler handler) {
     const short bufsize = 1024;
     int id = 0;
     int receiptnumber = 0;
+    unordered_map<string, int> genreIdMap;
 
     char buf[bufsize];
     bool terminate = false;
@@ -44,15 +47,20 @@ void Keyboard::process(ConnectionHandler handler) {
 
         }
         if (firstword == "join") {
-            stompframe = "SUBSCRIBE\ndestination:/topic/"+
-                    line.substr(0,line.find_first_of(' '))+
-                    "\nid:"+to_string(id)+"\nreceipt:"+to_string(receiptnumber)+"\n\n\0";
+            string genre = line.substr(0,line.find_first_of(' '));
+            stompframe = "SUBSCRIBE"
+                         "\ndestination:" + genre +
+                         "\nid:"+to_string(id)+
+                         "\nreceipt:"+to_string(receiptnumber)+
+                         "\n\n\0";
             id++;
             receiptnumber++;
+            genreIdMap[genre] = id;
         }
         if (firstword == "exit") {
-            stompframe = "UNSUBSCRIBE\n"+******TODO*ID FROM DATA BASE*****+"\n\n\0";
-
+            string genre; // TODO: tal put here the genre
+            stompframe = "UNSUBSCRIBE\n"+ to_string(genreIdMap[genre]) + "\n\n\0";
+            genreIdMap.erase(genre); // deletes it from the map
         }
         if (firstword == "add") {
 
