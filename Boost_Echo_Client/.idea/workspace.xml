@@ -13,9 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e67b59fa-1c49-478f-a651-e0f189da3179" name="Default Changelist" comment="add book">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Keyboard.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Keyboard.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/Book.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/Keyboard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/Keyboard.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/STOMPClient.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/STOMPClient.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/STOMP/STOMPClient.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/STOMPClient.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +108,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="107e0c44-c664-4073-bdc1-909920ffe995" name="Default Changelist" comment="" />
+      <changelist id="e67b59fa-1c49-478f-a651-e0f189da3179" name="Default Changelist" comment="add book" />
       <created>1578415526321</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -125,6 +124,7 @@
       <workItem from="1579096534422" duration="1917000" />
       <workItem from="1579098788345" duration="8211000" />
       <workItem from="1579171245939" duration="1746000" />
+      <workItem from="1579178693277" duration="1816000" />
     </task>
     <task id="LOCAL-00001" summary="1.1st">
       <created>1578415582395</created>
@@ -214,10 +214,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="694" y="357" width="589" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1578773505701" />
-    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2" timestamp="1579174142863">
+    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2" timestamp="1579175581495">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579174142863" />
+    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579175581495" />
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1579173654469">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -246,10 +246,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="698" y="270" width="580" height="564" key="MultipleFileMergeDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579173345643" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579172292298">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579175587858">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579172292298" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579175587858" />
     <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579174916886">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -258,18 +258,18 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="640" y="149" width="707" height="807" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1579173999406" />
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1579172468077">
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1579180316152">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1579172468077" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1579180316152" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/STOMP/STOMPClient.cpp</url>
-          <line>18</line>
-          <option name="timeStamp" value="10" />
+          <line>22</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
