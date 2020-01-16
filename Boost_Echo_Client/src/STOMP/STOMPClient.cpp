@@ -16,11 +16,9 @@
 using namespace std;
 Books* mybooks = new Books();
 string answer;
-
+int disconnectFlag=0;
 int main(int argc, char **argv) {
-    if(1<2) {
 
-    }
     bool terminate = false;
     if (argc < 3) {
         std::cerr << "Usage: " << argv[0] << " host port" << std::endl << std::endl;
@@ -35,7 +33,6 @@ int main(int argc, char **argv) {
         return 1;
     }
     std::cout<<"connected to server"<<std::endl;
-
     //thread::thread Keyboard(Keyboard::process(handler,mybooks));
 
     while(!terminate)
@@ -61,7 +58,7 @@ int main(int argc, char **argv) {
         {
             STOMPClient::getUntilDelimiter(':'); // to the trash, its the header name
             string receiptId = STOMPClient::getUntilDelimiter('\n');
-            if (disconnectFlag)
+            if (to_string(disconnectFlag)==receiptId)
                 terminate=true;// TODO: close keyboard and check the receipt id
         }
         else if (command=="SEND")
@@ -101,4 +98,9 @@ string STOMPClient::getUntilDelimiter(char del) {
     answer.substr(i+1);
     return toReturn;
 }
+
+void STOMPClient::setDisconnectFlag(int receiptId) {
+    disconnectFlag = receiptId;
+}
+
 
