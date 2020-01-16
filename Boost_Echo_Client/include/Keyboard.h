@@ -7,10 +7,11 @@
 
 
 #include "connectionHandler.h"
+#include "Books.h"
 
 class Keyboard {
 public:
-    void process(ConnectionHandler handler);
+    void process(ConnectionHandler handler,Books books);
 
 };
 

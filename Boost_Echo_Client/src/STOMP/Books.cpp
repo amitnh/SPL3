@@ -13,6 +13,9 @@ Books::Books(){}
 void Books::addBook(Book book){
     books.push_back(book);
 }
+vector<Book> Books::getAllBooks(){
+    return books;
+}
 void Books::removeBook(string name){
     int i=0;
     for(Book b:books){

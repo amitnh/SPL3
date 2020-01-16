@@ -4,13 +4,16 @@
 
 #include "../include/Keyboard.h"
 #include "../include/connectionHandler.h"
+#include "../include/Books.h"
+
+
 #include <unordered_map>
 #include <iostream>
 #include <cassert>
 using namespace std;
 
 //eyboard thread
-void Keyboard::process(ConnectionHandler handler) {
+void Keyboard::process(ConnectionHandler handler, Books books) {
     const short bufsize = 1024;
     int id = 0;
     int receiptnumber = 0;
@@ -63,6 +66,13 @@ void Keyboard::process(ConnectionHandler handler) {
             genreIdMap.erase(genre); // deletes it from the map
         }
         if (firstword == "add") {
+            spaceindex = line.find_first_of(' ');
+            string genre = line.substr(0, spaceindex);
+            line = line.substr(spaceindex + 1);       ///line=book name
+
+            Book *book = new Book(line, "myself", genre, true);
+            books.addBook(*book);
+        }
 
         }
         if (firstword == "borrow") {

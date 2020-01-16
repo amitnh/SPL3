@@ -31,7 +31,7 @@ int STOMPClient::main(int argc, char **argv) {
     }
     std::cout<<"connected to server"<<std::endl;
 
-    thread::thread keyboard(Keyboard::process(handler));
+    thread::thread keyboard(Keyboard::process(handler,mybooks));
 
     While(!terminate)
     {

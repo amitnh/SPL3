@@ -40,6 +40,7 @@ public:
 
 protected:
     vector<Book> books;//change to vector of arrays -[name,owner,isavailable]
+    vector<Book> getAllBooks();
 };
 
 
