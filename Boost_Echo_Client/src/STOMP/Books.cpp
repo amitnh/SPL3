@@ -60,6 +60,10 @@ void Books::removeAskedBook(Book book){
     booksiAskedFor.push_back(book);
 }
 
+const vector<Book> &Books::getBooksiAskedFor() const {
+    return booksiAskedFor;
+}
+
 //-------------BOOK----------------
 const string &Book::getName() const {
     return name;

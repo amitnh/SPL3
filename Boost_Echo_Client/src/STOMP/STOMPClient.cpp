@@ -28,13 +28,14 @@ int main(int argc, char **argv) {
     short port = atoi(argv[2]);
 
     ConnectionHandler handler(host, port);
+    ConnectionHandler* handler_ptr = &handler;
     if (!handler.connect()) {
         std::cerr << "Cannot connect to " << host << ":" << port << std::endl;
         return 1;
     }
     std::cout<<"connected to server"<<std::endl;
     std::mutex mutex;
-    Keyboard task1(handler,mybooks, mutex);
+    Keyboard task1(handler_ptr,mybooks, mutex);
     std::thread th1(&Keyboard::process, &task1);
     mybooks= new Books();
 
@@ -94,7 +95,7 @@ int main(int argc, char **argv) {
                             stompframe="SEND"
                                        "\ndestination:"+genre+
                                        "\n"
-                                       //TODO: get my name
+                                       //TODO: get my K
                                        + " has " + bookName;
                         }
                     }
@@ -103,14 +104,16 @@ int main(int argc, char **argv) {
                 {
                     STOMPClient::getUntilDelimiter(' ');// has
                     string bookName= answer; // {book name}
-                    if (booksiAskedFor== bookName)
-                    {
-                        //SEND Taking {book name} from {book owner username}
-                        stompframe="SEND"
-                                   "\ndestination:"+genre+
-                                   "\n\nTaking" + bookName + " from " + user;
-
-                        mybooks->addBook(*(new Book(bookName,user,genre,true)));
+                    for (Book b:mybooks->getBooksiAskedFor()) {
+                        if (b.getName() == bookName) {
+                            //SEND Taking {book name} from {book owner username}
+                            stompframe = "SEND"
+                                         "\ndestination:" + genre +
+                                         "\n\nTaking" + bookName + " from " + user;
+                            mybooks->addBook(*(new Book(bookName, user, genre, true)));
+                            mybooks->removeAskedBook(b);
+                            break;
+                        }
                     }
                 }
             }
@@ -124,7 +127,7 @@ int main(int argc, char **argv) {
     }
     return 0;
 }
-}
+
 
 string STOMPClient::getUntilDelimiter(char del) {
     int i = answer.find_first_of(del);

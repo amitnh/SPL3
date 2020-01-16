@@ -9,5 +9,4 @@
 #include "ConnectionHandler.h"
 #include "Books.h"
 
-
 #endif //BOOST_ECHO_CLIENT_KEYBOARD_H

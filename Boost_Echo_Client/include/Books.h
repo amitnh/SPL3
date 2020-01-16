@@ -43,6 +43,7 @@ public:
     void addAskedBook(Book book);
     void removeAskedBook(Book book);
 
+    const vector<Book> &getBooksiAskedFor() const;
 
 protected:
     vector<Book> booksiAskedFor;
