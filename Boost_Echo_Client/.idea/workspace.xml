@@ -13,14 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e67b59fa-1c49-478f-a651-e0f189da3179" name="Default Changelist" comment="add book">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/Keyboard.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Keyboard.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/STOMP/Book.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/STOMP/Keyboard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/Keyboard.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/STOMPClient.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/STOMPClient.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/echoClient.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spl-net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spl-net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spl-net/src/main/java/bgu/spl/net/impl/stomp/StompServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spl-net/src/main/java/bgu/spl/net/impl/stomp/StompServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,10 +206,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="add book" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579174138358">
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579175089023">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579174138358" />
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579175089023" />
     <state x="694" y="357" width="589" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578773505701">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -275,11 +270,6 @@
           <url>file://$PROJECT_DIR$/src/STOMP/STOMPClient.cpp</url>
           <line>18</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/STOMP/Keyboard.cpp</url>
-          <line>111</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

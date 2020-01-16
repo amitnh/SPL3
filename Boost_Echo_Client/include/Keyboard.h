@@ -11,7 +11,7 @@
 
 class Keyboard {
 public:
-    void process(Books books);
+    void process(ConnectionHandler handler, Books books);
 
 };
 

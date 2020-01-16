@@ -13,7 +13,7 @@
 using namespace std;
 
 //eyboard thread
-void Keyboard::process( Books books) {
+void Keyboard::process(ConnectionHandler handler, Books books) {
     const short bufsize = 1024;
     int id = 0;
     int receiptnumber = 0;
@@ -26,10 +26,6 @@ void Keyboard::process( Books books) {
 
         cin.getline(buf, bufsize); // blocked
         string line(buf);
-
-
-        line="login 1 2 3";
-
 
         int len = line.length();
 
@@ -108,13 +104,10 @@ void Keyboard::process( Books books) {
 
 
         //ALREADY AS STOMP, SEND AS BYTES TO SERVER:
-
-        cout<<stompframe;
-
-//        if (!handler.sendLine(line)) {
-//            std::cout << "Disconnected. Exiting...\n" << std::endl;
-//            terminate = true;
-//        }
+        if (!handler.sendLine(stompframe)) {
+            std::cout << "Disconnected. Exiting...\n" << std::endl;
+            terminate = true;
+        }
 
 
     }
