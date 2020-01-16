@@ -13,15 +13,17 @@
 using namespace std;
 
 //eyboard thread
-void Keyboard::process(ConnectionHandler handler, Books books) {
+void Keyboard::process(ConnectionHandler handler, Books books, string name) {
     const short bufsize = 1024;
     int id = 0;
     int receiptnumber = 0;
+    string myname;
     unordered_map<string, int> genreIdMap;
 
     char buf[bufsize];
     bool terminate = false;
     while (!terminate) {
+
         cin.getline(buf, bufsize); // blocked
         string line(buf);
         int len = line.length();
@@ -46,6 +48,7 @@ void Keyboard::process(ConnectionHandler handler, Books books) {
             string passcode = line.substr(0, spaceindex);
             line = line.substr(spaceindex+1);
 
+            myname = loginName;
             stompframe = "CONNECT\naccept-version:1.2\nhost:"+hostport+"login:"+loginName+"passcode:"+passcode+"\n\n\0";
 
         }
@@ -74,15 +77,27 @@ void Keyboard::process(ConnectionHandler handler, Books books) {
             books.addBook(*book);
         }
 
-        }
+
         if (firstword == "borrow") {
+            spaceindex = line.find_first_of(' ');
+            string genre = line.substr(0, spaceindex);
+            line = line.substr(spaceindex + 1);       ///line=book name
+            stompframe="SEND\ndestination:"+genre+
+                    "\n\n"+myname+" wish to borrow "+line+"\n\0";
 
         }
         if (firstword == "return") {
+            spaceindex = line.find_first_of(' ');
+            string genre = line.substr(0, spaceindex);
+            line = line.substr(spaceindex + 1);       ///line=book name
 
+            stompframe="SEND\ndestination:"+genre+
+                       "\n\nReturning "+line+" to "+books.getBook(line).getLender()+"\n\0";
         }
         if (firstword == "logout") {
-
+            stompframe="DISCONNECT"
+                       "\nreceipt:"+to_string(receiptnumber)+"\n\n\0";
+            receiptnumber++;
         }
 
 
