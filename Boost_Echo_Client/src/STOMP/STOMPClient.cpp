@@ -34,10 +34,12 @@ int main(int argc, char **argv) {
         return 1;
     }
     std::cout<<"connected to server"<<std::endl;
+    mybooks= new Books();
+
     std::mutex mutex;
     Keyboard task1(handler_ptr,mybooks, mutex);
     std::thread th1(&Keyboard::process, &task1);
-    mybooks= new Books();
+
     string stompframe;
 
     while(!terminate)

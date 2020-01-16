@@ -46,7 +46,7 @@ public:
 
             string stompframe;
             int spaceindex = line.find_first_of(' ');
-            string firstword = line.substr(0, spaceindex);
+            string firstword = line.substr(0, spaceindex); //command
             line = line.substr(spaceindex + 1);
             //now checking for command:
             if (firstword == "login") {
@@ -64,7 +64,7 @@ public:
 
                 myname = loginName;
                 mybooks->setMyname(myname);
-                stompframe = "CONNECT\naccept-version:1.2\nhost:" + hostport + "login:" + loginName + "passcode:" +
+                stompframe = "CONNECT\naccept-version:1.2\nhost:" + hostport + "\nlogin:" + loginName + "\npasscode:" +
                              passcode + "\n\n\0";
 
             }
@@ -82,7 +82,7 @@ public:
             if (firstword == "exit") {
                 string genre = line;
 
-                stompframe = "UNSUBSCRIBE\n" + to_string(genreIdMap[genre]) + "\n\n\0";
+                stompframe = "UNSUBSCRIBE\nreceipt:" + to_string(genreIdMap[genre]) + "\n\n\0";
                 genreIdMap.erase(genre); // deletes it from the map
             }
             if (firstword == "add") {
@@ -92,6 +92,8 @@ public:
 
                 Book *book = new Book(line, "myself", genre, true);
                 mybooks->addBook(*book);
+                for(auto x :mybooks->getAllBooks())
+                    cout<<x.getName()<<endl;
             }
 
 
@@ -119,12 +121,12 @@ public:
                 receiptnumber++;
             }
 
-
+            cout<<stompframe+"@"<<endl;
             //ALREADY AS STOMP, SEND AS BYTES TO SERVER:
-            if (!handler->sendLine(stompframe)) {
-                std::cout << "Disconnected. Exiting...\n" << std::endl;
-                terminate = true;
-            }
+//            if (!handler->sendLine(stompframe)) {
+//                std::cout << "Disconnected. Exiting...\n" << std::endl;
+//                terminate = true;
+//            }
 
 
         }

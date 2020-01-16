@@ -44,9 +44,6 @@ const string &Books::getMyname() const {
     return myname;
 }
 
-void Books::setMyname(const string &myname) {
-    Books::myname = myname;
-}
 void Books::addAskedBook(Book book){
     booksiAskedFor.push_back(book);
 }
@@ -62,6 +59,10 @@ void Books::removeAskedBook(Book book){
 
 const vector<Book> &Books::getBooksiAskedFor() const {
     return booksiAskedFor;
+}
+
+void Books::setMyname(string &myname) {
+    this->myname = myname;
 }
 
 //-------------BOOK----------------
