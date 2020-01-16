@@ -51,6 +51,7 @@ int main(int argc, char **argv) {
             break;
         }
 
+        cout<<"Server:\n"+answer<<endl;//TODO delete..
         string command = STOMPClient::getUntilDelimiter('\n');
         if (command=="RECEIPT")
         {
@@ -124,9 +125,12 @@ int main(int argc, char **argv) {
         {
             cout<<"Login successful"<<endl;
         }
+
         if(stompframe!="") //sending the frame to the Server
         {
+            mutex.lock();
             handler.sendLine(stompframe);
+            mutex.unlock();
         }
     }
 

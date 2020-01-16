@@ -32,11 +32,11 @@ public:
         int receiptnumber = 0;
         string myname;
         unordered_map<string, int> genreIdMap;
-
+        string stompframe;
         char buf[bufsize];
         bool terminate = false;
         while (!terminate) {
-
+            stompframe="";
             cin.getline(buf, bufsize); // blocked
             string line(buf);
 
@@ -44,7 +44,6 @@ public:
 
             //MAKE STOMP FROM LINE
 
-            string stompframe;
             int spaceindex = line.find_first_of(' ');
             string firstword = line.substr(0, spaceindex); //command
             line = line.substr(spaceindex + 1);
@@ -92,7 +91,7 @@ public:
             }
             if (firstword == "add") {
                 spaceindex = line.find_first_of(' ');
-                string genre = line.substr(0, spaceindex);
+                string genre = line.substr(0, spaceindex); ///genre
                 line = line.substr(spaceindex + 1);       ///line=book name
 
                 Book *book = new Book(line, "myself", genre, true);
@@ -130,11 +129,19 @@ public:
             if(firstword=="books")
                 for(auto x :mybooks->getAllBooks())
                     cout<<x.getName()<<endl;
-            cout<<stompframe+"@"<<endl;
+
+
             //ALREADY AS STOMP, SEND AS BYTES TO SERVER:
-            if (!handler->sendLine(stompframe)) {
-                std::cout << "Disconnected. Exiting...\n" << std::endl;
-                terminate = true;
+            if(stompframe.size()>0) {
+                cout << "Client:\n" + stompframe + "@" << endl;
+                mutex.lock();
+                if (!handler->sendLine(stompframe)) {
+
+                    std::cout << "Disconnected. Exiting...\n" << std::endl;
+                    terminate = true;
+                }
+                mutex.unlock();
+
             }
 
 
