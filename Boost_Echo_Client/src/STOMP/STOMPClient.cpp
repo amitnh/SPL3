@@ -6,15 +6,15 @@
 #include <stdlib.h>
 #include <connectionHandler.h>
 #include <Books.h>
-#include <MessageEncDec.h>
 #include "../include/Keyboard.h"
 
+#include <thread>
+#include <iostream>
 /**
 * This code assumes that the server replies the exact text the client sent it (as opposed to the practical session example)
 */
-
-public static boolean terminate=false;
-public Books mybooks = new Books();
+using namespace std;
+Books* mybooks = new Books();
 
 int STOMPClient::main(int argc, char **argv) {
     if (argc < 3) {
@@ -24,14 +24,14 @@ int STOMPClient::main(int argc, char **argv) {
     std::string host = argv[1];
     short port = atoi(argv[2]);
 
-    connectionHandler handler(host, port);
+    ConnectionHandler handler(host, port);
     if (!handler.connect()) {
         std::cerr << "Cannot connect to " << host << ":" << port << std::endl;
         return 1;
     }
     std::cout<<"connected to server"<<std::endl;
 
-    thread::thread keyboard(Keyboard::process(handler,mybooks));
+    thread::thread Keyboard(Keyboard::process(handler,mybooks));
 
     While(!terminate)
     {
