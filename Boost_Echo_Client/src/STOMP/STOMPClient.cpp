@@ -17,9 +17,7 @@ using namespace std;
 Books* mybooks = new Books();
 
 int main(int argc, char **argv) {
-    if(1<2) {
 
-    }
     if (argc < 3) {
         std::cerr << "Usage: " << argv[0] << " host port" << std::endl << std::endl;
         return -1;
@@ -48,11 +46,13 @@ int main(int argc, char **argv) {
         // A C string must end with a 0 char delimiter.  When we filled the answer buffer from the socket
         // we filled up to the \n char - we must make sure now that a 0 char is also present. So we truncate last character.
         answer.resize(len - 1);
+        string command;
         if (answer == "bye") {
-        string command = getUntilDelimiter(*answer,'\n');
-        if (command == "bye") {
-            std::cout << "Exiting...\n" << std::endl;
-            break;
+            command = getUntilDelimiter(*answer, '\n');
+            if (command == "bye") {
+                std::cout << "Exiting...\n" << std::endl;
+                break;
+            }
         }
         else if (command=="RECEIPT")
         {
@@ -72,7 +72,7 @@ int main(int argc, char **argv) {
                 Books toSend = mybooks.getBooksByGenre(genre);
                 stompframe="SEND"
                            "\ndestination:"+genre+
-                           "\n" +
+                           "\n"
                             //TODO: get my name
                             + ":");
                 for(name n:toSend.getName())
@@ -86,9 +86,10 @@ int main(int argc, char **argv) {
 
 
         }
-
     }
+
     return 0;
+
 }
 
 string STOMPClient::getUntilDelimiter(string *s, char del) { // updates s and

@@ -37,10 +37,11 @@ public:
     void removeBook(string name);
     Book getBook(string name);
     Books getBooksByGenre(string genre);
+    vector<Book> getAllBooks();
+
 
 protected:
     vector<Book> books;//change to vector of arrays -[name,owner,isavailable]
-    vector<Book> getAllBooks();
 };
 
 

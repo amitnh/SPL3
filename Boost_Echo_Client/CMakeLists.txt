@@ -9,6 +9,7 @@ add_executable(STOMPClient.cpp
         include/Books.h
         include/ConnectionHandler.h
         include/Keyboard.h
+        include/STOMPClient.h
         src/STOMP/Books.cpp
         src/STOMP/STOMPClient.cpp
         src/STOMP/Keyboard.cpp
