@@ -2,24 +2,24 @@
 // Created by amit on 1/15/20.
 //
 
-#include "../../include/STOMPClient.h"
+#include "STOMPClient.h"
 #include <stdlib.h>
-#include <connectionHandler.h>
+#include <ConnectionHandler.h>
 #include <Books.h>
+#include "Keyboard.h"
+
 #include <thread>
-#include "../include/Keyboard.h"
 #include <iostream>
-
-
 /**
 * This code assumes that the server replies the exact text the client sent it (as opposed to the practical session example)
 */
-
-static bool terminate=false;
-Books mybooks;
+using namespace std;
+Books* mybooks = new Books();
 
 int main(int argc, char **argv) {
+    if(1<2) {
 
+    }
     if (argc < 3) {
         std::cerr << "Usage: " << argv[0] << " host port" << std::endl << std::endl;
         return -1;
@@ -34,16 +34,21 @@ int main(int argc, char **argv) {
     }
     std::cout<<"connected to server"<<std::endl;
 
-    thread::thread keyboard(Keyboard::process(handler,mybooks));
+    //thread::thread Keyboard(Keyboard::process(handler,mybooks));
 
-    While(!terminate)
+    while(!terminate)
     {
-        string stompframe;
         string answer;
         if (!handler.getLine(answer)) {
             std::cout << "Disconnected. Exiting...\n" << std::endl;
             break;
         }
+
+        int len = answer.length();
+        // A C string must end with a 0 char delimiter.  When we filled the answer buffer from the socket
+        // we filled up to the \n char - we must make sure now that a 0 char is also present. So we truncate last character.
+        answer.resize(len - 1);
+        if (answer == "bye") {
         string command = getUntilDelimiter(*answer,'\n');
         if (command == "bye") {
             std::cout << "Exiting...\n" << std::endl;

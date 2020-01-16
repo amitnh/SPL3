@@ -1,17 +1,29 @@
 CFLAGS:=-c -Wall -Weffc++ -g -std=c++11 -Iinclude
 LDFLAGS:=-lboost_system
 
-all: EchoClient
-	g++ -o bin/echoExample bin/connectionHandler.o bin/echoClient.o $(LDFLAGS) 
+all: STOMPClient
+	g++ -pthread -o bin/STOMPClient bin/Books.o bin/ConnectionHandler.o bin/Keyboard.o  bin/STOMPClient.o $(LDFLAGS)
 
-EchoClient: bin/connectionHandler.o bin/echoClient.o
-	
-bin/connectionHandler.o: src/connectionHandler.cpp
-	g++ $(CFLAGS) -o bin/connectionHandler.o src/connectionHandler.cpp
+STOMPClient: bin/Books.o bin/ConnectionHandler.o bin/Keyboard.o bin/STOMPClient.o
+	@echo 'Building target: STOMPClient'
+	@echo 'Invoking: C++ Linker'
+	@echo 'Finished building target: STOMPClient'
+	@echo ' '
 
-bin/echoClient.o: src/echoClient.cpp
-	g++ $(CFLAGS) -o bin/echoClient.o src/echoClient.cpp
-	
+bin/Books.o: src/STOMP/Books.cpp
+	g++ -pthread $(CFLAGS) -o bin/Books.o src/STOMP/Books.cpp
+
+bin/ConnectionHandler.o: src/STOMP/ConnectionHandler.cpp
+	g++ -pthread $(CFLAGS) -o bin/ConnectionHandler.o src/STOMP/ConnectionHandler.cpp
+
+bin/Keyboard.o: src/STOMP/Keyboard.cpp
+	g++ -pthread $(CFLAGS) -o bin/Keyboard.o src/STOMP/Keyboard.cpp
+
+
+bin/STOMPClient.o: src/STOMPClient.cpp
+	g++ -pthread $(CFLAGS) -o bin/STOMPClient.o src/STOMPClient.cpp
+
+
 .PHONY: clean
 clean:
 	rm -f bin/*
