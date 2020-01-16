@@ -38,10 +38,11 @@ int main(int argc, char **argv) {
     Keyboard task1(handler_ptr,mybooks, mutex);
     std::thread th1(&Keyboard::process, &task1);
     mybooks= new Books();
+    string stompframe;
 
     while(!terminate)
     {
-        string stompframe;
+        stompframe="";
         answer = "";
         if (!handler.getLine(answer)) {
             std::cout << "Disconnected. Exiting...\n" << std::endl;
@@ -121,8 +122,12 @@ int main(int argc, char **argv) {
         {
             cout<<"Login successful"<<endl;
         }
-
+        if(stompframe!="") //sending the frame to the Server
+        {
+            handler.sendLine(stompframe);
+        }
     }
+
     return 0;
 }
 
