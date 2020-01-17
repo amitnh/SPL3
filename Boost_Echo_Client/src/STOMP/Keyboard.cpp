@@ -19,7 +19,7 @@ private:
     ConnectionHandler* handler;
     std::mutex& mutex;
     Books *mybooks;
-    bool& terminate;
+    bool terminate;
     int disconnectFlag;
 
 public:
