@@ -33,23 +33,23 @@ private:
 class Books {
 public:
     Books();
-    void addBook(Book book);
+    void addBook(Book* book);
     void removeBook(string name);
-    Book getBook(string name);
+    Book* getBook(string name);
     const string &getMyname() const;
 
 
-    Books getBooksByGenre(string genre);
-    vector<Book> getAllBooks();
-    void addAskedBook(Book book);
-    void removeAskedBook(Book book);
+    Books* getBooksByGenre(string genre);
+    vector<Book*> getAllBooks();
+    void addAskedBook(Book* book);
+    void removeAskedBook(Book* book);
 
     void setMyname(string &myname);
 
-    const vector<Book> &getBooksiAskedFor() const;
+    const vector<Book*> &getBooksiAskedFor() const;
     string myname;
-    vector<Book> booksiAskedFor;
-    vector<Book> books;//change to vector of arrays -[name,owner,isavailable]
+    vector<Book*> booksiAskedFor;
+    vector<Book*> books;//change to vector of arrays -[name,owner,isavailable]
 
 };
 

@@ -10,32 +10,32 @@ using namespace std;
 //book [name,owner,isavailable]
 
 Books::Books(){}
-void Books::addBook(Book book){
+void Books::addBook(Book* book){
     books.push_back(book);
 }
-vector<Book> Books::getAllBooks(){
+vector<Book*> Books::getAllBooks(){
     return books;
 }
 void Books::removeBook(string name){
     int i=0;
-    for(Book b:books){
-        if (b.getName()==name)
+    for(Book* b:books){
+        if (b->getName()==name)
             books.erase(books.begin()+i);
         i+=1;
     }
 }
-Book Books::getBook(string name){
-    for(Book b:books){
-        if (b.getName()==name)
+Book* Books::getBook(string name){
+    for(Book* b:books){
+        if (b->getName()==name)
             return b;
     }
-    return *(new Book("","","", false));
+    return new Book("","","", false);
 }
-Books Books::getBooksByGenre(string genre){
-    Books booksByGenre;
-    for(Book b:books){
-        if (b.getGenre()==genre)
-            booksByGenre.addBook(b);
+Books* Books::getBooksByGenre(string genre){
+    Books* booksByGenre;
+    for(Book* b:books){
+        if (b->getGenre()==genre)
+            booksByGenre->addBook(b);
     }
     return booksByGenre;
 }
@@ -44,27 +44,28 @@ const string &Books::getMyname() const {
     return myname;
 }
 
-void Books::addAskedBook(Book book){
+void Books::addAskedBook(Book* book){
     booksiAskedFor.push_back(book);
 }
-void Books::removeAskedBook(Book book){
+void Books::removeAskedBook(Book* book){
     int i=0;
     for(auto x:booksiAskedFor)
-        if(x.getName()==book.getName()){
+        if(x->getName()==book->getName()){
             booksiAskedFor.erase(booksiAskedFor.begin()+i);
             i+=1;
         }
     booksiAskedFor.push_back(book);
 }
 
-const vector<Book> &Books::getBooksiAskedFor() const {
+const vector<Book*> &Books::getBooksiAskedFor() const {
     return booksiAskedFor;
 }
 
 void Books::setMyname(string &myname) {
     this->myname = myname;
 }
-
+//-------------BOOK----------------
+//-------------BOOK----------------
 //-------------BOOK----------------
 const string &Book::getName() const {
     return name;

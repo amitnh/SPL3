@@ -36,10 +36,17 @@ int main(int argc, char **argv) {
     std::cout<<"connected to server"<<std::endl;
     mybooks= new Books();
 
+
+    Book *book1 = new Book("book1","tal","banana",true);
+    mybooks->addBook(book1);
+    mybooks->getBook("book1")->setIsAvailable(false);
+    book1->setIsAvailable(false);
+
+
+
     std::mutex mutex;
     Keyboard task1(handler_ptr,mybooks, mutex);
     std::thread th1(&Keyboard::process, &task1);
-
     string stompframe;
 
     while(!terminate)
@@ -66,14 +73,14 @@ int main(int argc, char **argv) {
             STOMPClient::getUntilDelimiter('\n');
             string body = answer;
             if (body == "book status") {
-                Books toSend = mybooks->getBooksByGenre(genre);
-                if (!toSend.getAllBooks().empty()) {
+                Books* toSend = mybooks->getBooksByGenre(genre);
+                if (!toSend->getAllBooks().empty()) {
                     stompframe = "SEND"
                                  "\ndestination:" + genre +
                                  "\n"
                                  + mybooks->getMyname() + ":";
-                    for (Book b:toSend.getAllBooks()) {
-                        stompframe += b.getName() + ",";
+                    for (Book* b:toSend->getAllBooks()) {
+                        stompframe += b->getName() + ",";
                     }
                     stompframe.substr(0, stompframe.length() - 1); //removes the last comma TODO: check the sizes
                     stompframe += "\n\0";
@@ -88,8 +95,8 @@ int main(int argc, char **argv) {
                     STOMPClient::getUntilDelimiter(' ');// borrow
                     string bookName = answer;
                     //if i have it SEND {username} has {book name}
-                    for (Book b:mybooks->getBooksByGenre(genre).getAllBooks()) {
-                        if (b.getName() == bookName) {
+                    for (Book* b:mybooks->getBooksByGenre(genre)->getAllBooks()) {
+                        if (b->getName() == bookName) {
                             stompframe = "SEND"
                                          "\ndestination:" + genre +
                                          "\n"
@@ -100,13 +107,13 @@ int main(int argc, char **argv) {
                 {
                     STOMPClient::getUntilDelimiter(' ');// has
                     string bookName = answer; // {book name}
-                    for (Book b:mybooks->getBooksiAskedFor()) {
-                        if (b.getName() == bookName) {
+                    for (Book* b:mybooks->getBooksiAskedFor()) {
+                        if (b->getName() == bookName) {
                             //SEND Taking {book name} from {book owner username}
                             stompframe = "SEND"
                                          "\ndestination:" + genre +
                                          "\n\nTaking " + bookName + " from " + user;
-                            mybooks->addBook(*(new Book(bookName, user, genre, true)));
+                            mybooks->addBook(new Book(bookName, user, genre, true));
                             mybooks->removeAskedBook(b);
                             break;
                         }
@@ -117,8 +124,8 @@ int main(int argc, char **argv) {
                     string owner = STOMPClient::getUntilDelimiter(' ');//  {book owner}
                     if(mybooks->myname==owner)
                     {
-                        if(mybooks->getBook(bookName).getLender()==mybooks->getMyname())// if im the original owner
-                            mybooks->getBook(bookName).setIsAvailable(false);
+                        if(mybooks->getBook(bookName)->getLender()==mybooks->getMyname())// if im the original owner
+                            mybooks->getBook(bookName)->setIsAvailable(false);
                         else
                             mybooks->removeBook(bookName);
                     }

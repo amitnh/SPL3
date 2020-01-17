@@ -13,13 +13,11 @@
   <component name="ChangeListManager">
     <list default="true" id="107e0c44-c664-4073-bdc1-909920ffe995" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Books.o" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Books.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Keyboard.o" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Keyboard.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Books.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Books.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/STOMP/Books.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/Books.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/STOMP/Keyboard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/Keyboard.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/STOMP/STOMPClient.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/STOMPClient.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spl-net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spl-net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spl-net/src/main/java/bgu/spl/net/impl/stomp/StompServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spl-net/src/main/java/bgu/spl/net/impl/stomp/StompServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="STOMPClient.cpp" type="CMakeRunConfiguration" factoryName="Application" singleton="false" PROGRAM_PARAMS="127.0.0.1 7777" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Boost_Echo_Client" TARGET_NAME="STOMPClient.cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Boost_Echo_Client" RUN_TARGET_NAME="STOMPClient.cpp">
+    <configuration name="STOMPClient.cpp" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="127.0.0.1 7777" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Boost_Echo_Client" TARGET_NAME="STOMPClient.cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Boost_Echo_Client" RUN_TARGET_NAME="STOMPClient.cpp">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -133,8 +131,9 @@
       <workItem from="1579098788345" duration="8211000" />
       <workItem from="1579171245939" duration="4135000" />
       <workItem from="1579178705549" duration="1194000" />
-      <workItem from="1579179936661" duration="9729000" />
-      <workItem from="1579190658536" duration="4951000" />
+      <workItem from="1579179936661" duration="673000" />
+      <workItem from="1579186073129" duration="4200000" />
+      <workItem from="1579255755279" duration="1631000" />
     </task>
     <task id="LOCAL-00001" summary="1.1st">
       <created>1578415582395</created>
@@ -206,63 +205,42 @@
       <option name="project" value="LOCAL" />
       <updated>1579174903201</updated>
     </task>
-    <task id="LOCAL-00011" summary="a little bit of keyboard">
-      <created>1579180999466</created>
+    <task id="LOCAL-00011" summary="commit to tal">
+      <created>1579182613683</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1579180999466</updated>
+      <updated>1579182613683</updated>
     </task>
-    <task id="LOCAL-00012" summary="commited now for ait handada">
-      <created>1579182469592</created>
+    <task id="LOCAL-00012" summary="stomp protocol">
+      <created>1579186232357</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1579182469592</updated>
+      <updated>1579186232357</updated>
     </task>
-    <task id="LOCAL-00013" summary="runnable">
-      <created>1579183029446</created>
+    <task id="LOCAL-00013" summary="protocol done with no debugging">
+      <created>1579188172479</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1579183029446</updated>
+      <updated>1579188172479</updated>
     </task>
-    <task id="LOCAL-00014" summary="books amit asked for">
-      <created>1579186997843</created>
+    <task id="LOCAL-00014" summary="protocol done with no debugging">
+      <created>1579188337783</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1579186997843</updated>
+      <updated>1579188337783</updated>
     </task>
-    <task id="LOCAL-00015" summary="keyboard working">
-      <created>1579189543007</created>
+    <task id="LOCAL-00015" summary="send frame">
+      <created>1579188498610</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1579189543007</updated>
+      <updated>1579188498610</updated>
     </task>
-    <task id="LOCAL-00016" summary="keyboard working">
-      <created>1579190239380</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1579190239380</updated>
-    </task>
-    <task id="LOCAL-00017" summary="might include mutex locks">
-      <created>1579190535802</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1579190535802</updated>
-    </task>
-    <task id="LOCAL-00018" summary="debug stompframe empty">
-      <created>1579192523915</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1579192523915</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,102 +269,79 @@
     <MESSAGE value="dohef shuv" />
     <MESSAGE value="add book" />
     <MESSAGE value="a little bit of keyboard" />
-    <MESSAGE value="commited now for ait handada" />
-    <MESSAGE value="runnable" />
-    <MESSAGE value="books amit asked for" />
-    <MESSAGE value="keyboard working" />
-    <MESSAGE value="might include mutex locks" />
-    <MESSAGE value="debug stompframe empty" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug stompframe empty" />
+    <MESSAGE value="commit to tal" />
+    <MESSAGE value="stomp protocol" />
+    <MESSAGE value="protocol done with no debugging" />
+    <MESSAGE value="send frame" />
+    <option name="LAST_COMMIT_MESSAGE" value="send frame" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579193460324">
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579175092244">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579193460324" />
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579175092244" />
     <state x="694" y="357" width="589" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579179092867">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="694" y="357" width="589" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1579179092867" />
-    <state x="801" y="271" width="465" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1579188807237">
+    <state x="801" y="271" width="465" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1579187517679">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="801" y="271" width="465" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1579188807237" />
-    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2" timestamp="1579195643600">
+    <state x="801" y="271" width="465" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1579187517679" />
+    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2" timestamp="1579188498005">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579195643600" />
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1578416120185">
+    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579188498005" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1579256875007">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1578416120185" />
-    <state width="1807" height="146" key="GridCell.Tab.0.bottom" timestamp="1579195052110">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1579256875007" />
+    <state width="1807" height="465" key="GridCell.Tab.0.bottom" timestamp="1579257365108">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="146" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579195052110" />
-    <state width="1807" height="146" key="GridCell.Tab.0.center" timestamp="1579195052109">
+    <state width="1807" height="465" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579257365108" />
+    <state width="1807" height="465" key="GridCell.Tab.0.center" timestamp="1579257365107">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="146" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579195052109" />
-    <state width="1807" height="146" key="GridCell.Tab.0.left" timestamp="1579195052109">
+    <state width="1807" height="465" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579257365107" />
+    <state width="1807" height="465" key="GridCell.Tab.0.left" timestamp="1579257365107">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="146" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579195052109" />
-    <state width="1807" height="146" key="GridCell.Tab.0.right" timestamp="1579195052110">
+    <state width="1807" height="465" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579257365107" />
+    <state width="1807" height="465" key="GridCell.Tab.0.right" timestamp="1579257365107">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="146" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579195052110" />
-    <state x="242" y="116" width="1482" height="872" key="MergeDialog" timestamp="1579180902117">
+    <state width="1807" height="465" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579257365107" />
+    <state x="242" y="116" width="1482" height="872" key="MergeDialog" timestamp="1579182563148">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="242" y="116" width="1482" height="872" key="MergeDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579180902117" />
-    <state x="698" y="270" width="580" height="564" key="MultipleFileMergeDialog" timestamp="1579188587023">
+    <state x="242" y="116" width="1482" height="872" key="MergeDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579182563148" />
+    <state x="698" y="270" width="580" height="564" key="MultipleFileMergeDialog" timestamp="1579255804493">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="698" y="270" width="580" height="564" key="MultipleFileMergeDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579188587023" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579195648392">
+    <state x="698" y="270" width="580" height="564" key="MultipleFileMergeDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579255804493" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579188501803">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579195648392" />
-    <state x="741" y="170" width="494" height="764" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579193998112">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579188501803" />
+    <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579255797338">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="741" y="170" width="494" height="764" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1579193998112" />
-    <state x="761" y="472" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579188580810">
+    <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579255797338" />
+    <state x="640" y="149" width="707" height="807" key="find.popup" timestamp="1579180078046">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="761" y="472" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579188580810" />
-    <state x="640" y="149" width="707" height="807" key="find.popup" timestamp="1579195070183">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="640" y="149" width="707" height="807" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1579195070183" />
-    <state x="738" y="196" width="501" height="713" key="refactoring.ChangeSignatureDialog" timestamp="1579184882481">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="738" y="196" width="501" height="713" key="refactoring.ChangeSignatureDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579184882481" />
+    <state x="640" y="149" width="707" height="807" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1579180078046" />
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1579172468077">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1579172468077" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/STOMP/STOMPClient.cpp</url>
-          <line>86</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/STOMP/STOMPClient.cpp</url>
-          <line>83</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="answer" language="ObjectiveC" />
+        <watch expression="mybooks" language="ObjectiveC" />
+        <watch expression="mybooks" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>

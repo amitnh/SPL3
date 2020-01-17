@@ -95,7 +95,7 @@ public:
                 line = line.substr(spaceindex + 1);       ///line=book name
 
                 Book *book = new Book(line, mybooks->getMyname(), genre, true);
-                mybooks->addBook(*book);
+                mybooks->addBook(book);
 
             }
 
@@ -107,7 +107,7 @@ public:
                 line = line.substr(spaceindex + 1);       ///line=book name
                 stompframe = "SEND\ndestination:" + genre +
                              "\n\n" + myname + " wish to borrow " + line + "\n\0";
-                mybooks->addAskedBook(*(new Book(line,"unknown",genre,false)));
+                mybooks->addAskedBook(new Book(line,"unknown",genre,false));
 
             }
             if (firstword == "return") {
@@ -116,7 +116,7 @@ public:
                 line = line.substr(spaceindex + 1);       ///line=book name
 
                 stompframe = "SEND\ndestination:" + genre +
-                             "\n\nReturning " + line + " to " + mybooks->getBook(line).getLender() + "\n\0";
+                             "\n\nReturning " + line + " to " + mybooks->getBook(line)->getLender() + "\n\0";
             }
             if (firstword == "logout") {
                 stompframe = "DISCONNECT"
@@ -128,11 +128,11 @@ public:
 
             if(firstword=="books")
                 for(auto x :mybooks->getAllBooks()) {
-                    if(x.isAvailable1())
-                    cout << "book name:" + x.getName() + " available. lender:" +x.getLender() << endl;
+                    if(x->isAvailable1())
+                    cout << "book name:" + x->getName() + " available. lender:" +x->getLender() << endl;
                     else
-                        cout << "book name:" + x.getName() + " not Available. lender:" +
-                                x.getLender() << endl;
+                        cout << "book name:" + x->getName() + " not Available. lender:" +
+                                x->getLender() << endl;
                 }
 
             //ALREADY AS STOMP, SEND AS BYTES TO SERVER:
