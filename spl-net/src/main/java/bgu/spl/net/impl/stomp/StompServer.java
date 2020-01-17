@@ -12,14 +12,14 @@ public class StompServer {
 //        test.tests();
         if(args[1].equals("tpc")) //
         Server.threadPerClient(
-                7777, //port
+                Integer.parseInt(args[0]), //port
                 new StompMessagingProtocolImp(), //protocol factory
                 new MessageEncDecImp()//message encoder decoder factory
         ).serve();
-        else if (args[1]=="reactor")
+        else if (args[1].equals("reactor"))
         Server.reactor(
                 Runtime.getRuntime().availableProcessors(),
-                Integer.getInteger(args[0]), //port
+                Integer.parseInt(args[0]), //port
                 new StompMessagingProtocolImp(), //protocol factory
                 new MessageEncDecImp()//message encoder decoder factory
         ).serve();

@@ -3,6 +3,8 @@ package bgu.spl.net.frames;
 import bgu.spl.net.srv.DataBase;
 import bgu.spl.net.srv.User;
 
+import java.util.HashMap;
+
 public class CONNECT extends Frame {
     private User currUser;
     public CONNECT(User currUser,String[] headers, String body) {

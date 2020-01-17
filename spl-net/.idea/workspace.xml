@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b661f945-c916-4a76-9ec4-3fcb8be627a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/frames/CONNECT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/frames/CONNECT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/frames/SUBSCRIBE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/frames/SUBSCRIBE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/stomp/StompServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/impl/stomp/StompServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +114,7 @@
     <configuration name="StompServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bgu.spl.net.impl.stomp.StompServer" />
       <module name="spl-net" />
-      <option name="PROGRAM_PARAMETERS" value="7777 tpc" />
+      <option name="PROGRAM_PARAMETERS" value="7777 reactor" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="bgu.spl.net.impl.stomp.*" />
@@ -166,7 +170,7 @@
       <workItem from="1578906310780" duration="7878000" />
       <workItem from="1578915165393" duration="18505000" />
       <workItem from="1579171428117" duration="1179000" />
-      <workItem from="1579255783584" duration="7869000" />
+      <workItem from="1579255783584" duration="9813000" />
     </task>
     <task id="LOCAL-00001" summary="1st">
       <created>1578415564167</created>
@@ -350,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579094949071</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="ENc Dec Debuggig complete">
+      <created>1579267571063</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1579267571063</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,10 +397,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="214" width="800" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1578417304713" />
-    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579191106141">
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579267678114">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579191106141" />
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579267678114" />
     <state x="801" y="265" width="736" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1579092224358">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -402,46 +413,46 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="541" y="310" width="894" height="484" key="#org.jetbrains.debugger.memory.view.InstancesWindow/67.27.1853.1053@67.27.1853.1053" timestamp="1579093805931" />
-    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2" timestamp="1579195658448">
+    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2" timestamp="1579267569923">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579195658448" />
+    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579267569923" />
     <state x="776" y="249" width="424" height="484" key="FileChooserDialogImpl" timestamp="1579006053685">
       <screen x="67" y="27" width="1853" height="930" />
     </state>
     <state x="776" y="249" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.930@67.27.1853.930" timestamp="1579006053685" />
-    <state width="1807" height="235" key="GridCell.Tab.0.bottom" timestamp="1579267470206">
+    <state width="1807" height="235" key="GridCell.Tab.0.bottom" timestamp="1579268956189">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="235" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579267470206" />
-    <state width="1807" height="235" key="GridCell.Tab.0.center" timestamp="1579267470206">
+    <state width="1807" height="235" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579268956189" />
+    <state width="1807" height="235" key="GridCell.Tab.0.center" timestamp="1579268956188">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="235" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579267470206" />
-    <state width="1807" height="235" key="GridCell.Tab.0.left" timestamp="1579267470206">
+    <state width="1807" height="235" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579268956188" />
+    <state width="1807" height="235" key="GridCell.Tab.0.left" timestamp="1579268956188">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="235" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579267470206" />
-    <state width="1807" height="235" key="GridCell.Tab.0.right" timestamp="1579267470206">
+    <state width="1807" height="235" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579268956188" />
+    <state width="1807" height="235" key="GridCell.Tab.0.right" timestamp="1579268956189">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="235" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579267470206" />
-    <state width="1807" height="235" key="GridCell.Tab.1.bottom" timestamp="1579267470207">
+    <state width="1807" height="235" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579268956189" />
+    <state width="1807" height="235" key="GridCell.Tab.1.bottom" timestamp="1579268956190">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="235" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579267470207" />
-    <state width="1807" height="235" key="GridCell.Tab.1.center" timestamp="1579267470207">
+    <state width="1807" height="235" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579268956190" />
+    <state width="1807" height="235" key="GridCell.Tab.1.center" timestamp="1579268956189">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="235" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579267470207" />
-    <state width="1807" height="235" key="GridCell.Tab.1.left" timestamp="1579267470206">
+    <state width="1807" height="235" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579268956189" />
+    <state width="1807" height="235" key="GridCell.Tab.1.left" timestamp="1579268956189">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="235" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579267470206" />
-    <state width="1807" height="235" key="GridCell.Tab.1.right" timestamp="1579267470207">
+    <state width="1807" height="235" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579268956189" />
+    <state width="1807" height="235" key="GridCell.Tab.1.right" timestamp="1579268956189">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="235" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579267470207" />
+    <state width="1807" height="235" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579268956189" />
     <state x="482" y="187" width="1024" height="845" key="SettingsEditor" timestamp="1578415547781">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -450,10 +461,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="499" height="446" key="SwitcherDM/67.27.1853.1053@67.27.1853.1053" timestamp="1578853432231" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579195654607">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579267574673">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579195654607" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579267574673" />
     <state width="926" height="527" key="XDebugger.FullValuePopup" timestamp="1579094651275">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -466,10 +477,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579257671974" />
-    <state x="638" y="283" width="1096" height="784" key="find.popup" timestamp="1579259549730">
+    <state x="638" y="283" width="1096" height="784" key="find.popup" timestamp="1579269168176">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="638" y="283" width="1096" height="784" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1579259549730" />
+    <state x="638" y="283" width="1096" height="784" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1579269168176" />
     <state x="738" y="181" width="500" height="743" key="refactoring.ChangeSignatureDialog" timestamp="1578919329475">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -479,16 +490,21 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bgu/spl/net/frames/CONNECTED.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/ActorThreadPool.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncDecImp.java</url>
-          <line>119</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/src/main/java/bgu/spl/net/srv/Reactor.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="Runtime.getRuntime().availableProcessors()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
