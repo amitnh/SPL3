@@ -2,9 +2,9 @@ package bgu.spl.net.frames;
 
 import bgu.spl.net.srv.ConnectionsImp;
 
-public class SEND extends Frame {
+    public class MESSAGE extends Frame {
 
-    public SEND(String[] headers, String body) {
+    public MESSAGE(String[] headers, String body) {
         super(headers, body);
     }
 

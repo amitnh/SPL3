@@ -36,7 +36,7 @@ public:
     void addBook(Book* book);
     void removeBook(string name);
     Book* getBook(string name);
-    const string &getMyname() const;
+    string &getMyname();
 
 
     Books* getBooksByGenre(string genre);
@@ -46,7 +46,7 @@ public:
 
     void setMyname(string &myname);
 
-    const vector<Book*> &getBooksiAskedFor() const;
+    vector<Book*> &getBooksiAskedFor();
     string myname;
     vector<Book*> booksiAskedFor;
     vector<Book*> books;//change to vector of arrays -[name,owner,isavailable]

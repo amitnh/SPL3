@@ -117,6 +117,8 @@ public:
 
                 stompframe = "SEND\ndestination:" + genre +
                              "\n\nReturning " + line + " to " + mybooks->getBook(line)->getLender() + "\n\0";
+
+                mybooks->removeBook(line);
             }
             if (firstword == "logout") {
                 stompframe = "DISCONNECT"

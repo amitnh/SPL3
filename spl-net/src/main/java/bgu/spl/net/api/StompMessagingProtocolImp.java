@@ -27,7 +27,7 @@ public class StompMessagingProtocolImp implements StompMessagingProtocol, Suppli
             new CONNECT(user,frame.getHeaders(),frame.getBody()).process();
             new CONNECTED(connectionId,new String[]{"1.2"},"");
         }
-        else if (frame.getClass()== SEND.class)
+        else if (frame.getClass()== MESSAGE.class)
         {
             frame.process();
         }

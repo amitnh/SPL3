@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b661f945-c916-4a76-9ec4-3fcb8be627a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/STOMPClient.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/STOMPClient.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/StompMessagingProtocolImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/StompMessagingProtocolImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/frames/SEND.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/frames/MESSAGE.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +171,7 @@
       <workItem from="1578906310780" duration="7878000" />
       <workItem from="1578915165393" duration="18505000" />
       <workItem from="1579171428117" duration="1179000" />
-      <workItem from="1579255783584" duration="745000" />
+      <workItem from="1579255783584" duration="2879000" />
     </task>
     <task id="LOCAL-00001" summary="1st">
       <created>1578415564167</created>
@@ -411,22 +415,22 @@
       <screen x="67" y="27" width="1853" height="930" />
     </state>
     <state x="776" y="249" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.930@67.27.1853.930" timestamp="1579006053685" />
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1579194566825">
+    <state width="1807" height="274" key="GridCell.Tab.0.bottom" timestamp="1579259427839">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579194566825" />
-    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1579194566824">
+    <state width="1807" height="274" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579259427839" />
+    <state width="1807" height="274" key="GridCell.Tab.0.center" timestamp="1579259427839">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579194566824" />
-    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1579194566824">
+    <state width="1807" height="274" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579259427839" />
+    <state width="1807" height="274" key="GridCell.Tab.0.left" timestamp="1579259427839">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579194566824" />
-    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1579194566825">
+    <state width="1807" height="274" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579259427839" />
+    <state width="1807" height="274" key="GridCell.Tab.0.right" timestamp="1579259427839">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579194566825" />
+    <state width="1807" height="274" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579259427839" />
     <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1579191474066">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -463,14 +467,14 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="772" y="244" width="432" height="616" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1578851064522" />
-    <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579091901670">
+    <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579257671974">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579091901670" />
-    <state x="638" y="283" width="1096" height="784" key="find.popup" timestamp="1579192894325">
+    <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579257671974" />
+    <state x="638" y="283" width="1096" height="784" key="find.popup" timestamp="1579259549730">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="638" y="283" width="1096" height="784" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1579192894325" />
+    <state x="638" y="283" width="1096" height="784" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1579259549730" />
     <state x="738" y="181" width="500" height="743" key="refactoring.ChangeSignatureDialog" timestamp="1578919329475">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

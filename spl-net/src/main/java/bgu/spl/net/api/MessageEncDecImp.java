@@ -24,7 +24,7 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
             String body = new String(bytes).trim();
             switch (command){
                 case "SEND":
-                    frame = new SEND(headers,body);
+                    frame = new MESSAGE(headers,body);
                     break;
                 case "CONNECT":
                     frame = new CONNECT(null,headers,body);
@@ -124,7 +124,7 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
                     str+= "receipt-id:" + message.getHeaders()[0];
                 str+= "\nmessage: " + message.getHeaders()[1];
                 break;
-            case "SEND":
+            case "MESSAGE":
                 str+= "destination:" + message.getHeaders()[0];
                 break;
         }
@@ -134,18 +134,18 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
 
         return str.getBytes(); //uses utf8 by default
     }
-    public void tests(){
-
-        String s = new String(encode(new SEND(new String[]{"5555"},"im sending message")));
-        System.out.println(s);
-        byte[] b = s.getBytes();
-        while(!s.isEmpty()) {
-            frmtst = this.decodeNextByte(b[0]);
-            s= s.substring(1);
-            b= s.getBytes();
-        }
-        s=s;
-    }
+//    public void tests(){
+//
+//        String s = new String(encode(new MESSAGE(new String[]{"5555"},"im sending message")));
+//        System.out.println(s);
+//        byte[] b = s.getBytes();
+//        while(!s.isEmpty()) {
+//            frmtst = this.decodeNextByte(b[0]);
+//            s= s.substring(1);
+//            b= s.getBytes();
+//        }
+//        s=s;
+//    }
 
 
 

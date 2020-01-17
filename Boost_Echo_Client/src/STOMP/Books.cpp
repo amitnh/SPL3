@@ -32,7 +32,7 @@ Book* Books::getBook(string name){
     return new Book("","","", false);
 }
 Books* Books::getBooksByGenre(string genre){
-    Books* booksByGenre;
+    Books* booksByGenre = new Books();
     for(Book* b:books){
         if (b->getGenre()==genre)
             booksByGenre->addBook(b);
@@ -40,7 +40,7 @@ Books* Books::getBooksByGenre(string genre){
     return booksByGenre;
 }
 
-const string &Books::getMyname() const {
+string &Books::getMyname(){
     return myname;
 }
 
@@ -57,7 +57,7 @@ void Books::removeAskedBook(Book* book){
     booksiAskedFor.push_back(book);
 }
 
-const vector<Book*> &Books::getBooksiAskedFor() const {
+vector<Book*> &Books::getBooksiAskedFor(){
     return booksiAskedFor;
 }
 

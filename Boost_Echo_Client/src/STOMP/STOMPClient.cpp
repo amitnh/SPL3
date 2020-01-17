@@ -19,6 +19,7 @@ Books* mybooks;
 string answer;
 int disconnectFlag=0;
 int main(int argc, char **argv) {
+
     bool terminate = false;
     if (argc < 3) {
         std::cerr << "Usage: " << argv[0] << " host port" << std::endl << std::endl;
@@ -37,10 +38,14 @@ int main(int argc, char **argv) {
     mybooks= new Books();
 
 
-    Book *book1 = new Book("book1","tal","banana",true);
-    mybooks->addBook(book1);
-    mybooks->getBook("book1")->setIsAvailable(false);
-    book1->setIsAvailable(false);
+//    Book* a  = new Book("a","a","a",true);
+//   mybooks->addBook(a);
+//  Book *book1 = new Book("book1","tal","a",true);
+//   mybooks->addBook(book1);
+//    vector<Book*> b = mybooks->getBooksByGenre("a")->getAllBooks();
+
+
+
 
 
 
@@ -67,7 +72,7 @@ int main(int argc, char **argv) {
             //if (to_string(disconnectFlag)==receiptId)
                 //terminate=true;// TODO: close keyboard and check the receipt id
         }
-        else if (command=="SEND") {
+        else if (command=="MESSAGE") {
             STOMPClient::getUntilDelimiter(':'); // to the trash, its the header name
             string genre = STOMPClient::getUntilDelimiter('\n');
             STOMPClient::getUntilDelimiter('\n');
@@ -103,7 +108,24 @@ int main(int argc, char **argv) {
                                          + mybooks->getMyname() + " has " + bookName;
                         }
                     }
-                } else if (answer.substr(0, 3) == "has")// "has {book name}-some else has it
+
+                }
+                else if (answer.substr(0, 4) == "Retu"){// “Returning {book name} to {book lender}”
+                    string bookName =  STOMPClient::getUntilDelimiter(' '); // {book name}
+                    STOMPClient::getUntilDelimiter(' ');// to
+                    string lender =  STOMPClient::getUntilDelimiter(' '); // {book lender}
+                    if(lender==mybooks->getMyname())
+                    {
+                        for (Book* b:mybooks->getAllBooks())
+                        {
+                            if (b->getName()==bookName)
+                                b->setIsAvailable(true);
+                        }
+
+                    }
+
+                }
+                else if (answer.substr(0, 3) == "has")// "has {book name}-some else has it
                 {
                     STOMPClient::getUntilDelimiter(' ');// has
                     string bookName = answer; // {book name}
@@ -122,12 +144,9 @@ int main(int argc, char **argv) {
                     string bookName = STOMPClient::getUntilDelimiter(' ');//  {book name}
                     STOMPClient::getUntilDelimiter(' ');// from
                     string owner = STOMPClient::getUntilDelimiter(' ');//  {book owner}
-                    if(mybooks->myname==owner)
+                    if(mybooks->getMyname()==owner)
                     {
-                        if(mybooks->getBook(bookName)->getLender()==mybooks->getMyname())// if im the original owner
                             mybooks->getBook(bookName)->setIsAvailable(false);
-                        else
-                            mybooks->removeBook(bookName);
                     }
                 }
             }
