@@ -73,6 +73,16 @@ public:
                                  "\npasscode:" +
                                  passcode +
                                  "\n\n\0";
+                    int j = hostport.find_first_not_of(':');
+                    string host = hostport.substr(0,j-1);
+                    int port = stoi(hostport.substr(j,hostport.length()-j));
+                    ConnectionHandler handlerNew(host,port);
+                    handler = &handlerNew;
+                    STOMPClient::setDisconnectFlag(false);
+                    if (!handler->connect()) {
+                        std::cerr << "Cannot connect to " << hostport  << std::endl;
+                                            }
+                    std::cout<<"connected to server"<<std::endl;
 
                 }
                 if (firstword == "join") {

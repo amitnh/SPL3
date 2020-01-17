@@ -18,24 +18,17 @@ using namespace std;
 Books* mybooks;
 string answer;
 int disconnectFlag=-1;
-int main(int argc, char **argv) {
+int main() {
     bool closeAll=false;
-    while (!closeAll) {
-        bool terminate= false;
-        if (argc < 3) {
-            std::cerr << "Usage: " << argv[0] << " host port" << std::endl << std::endl;
-            return -1;
-        }
-        std::string host = argv[1];
-        short port = atoi(argv[2]);
 
+    while (!closeAll) {
+        bool terminate= true;
+
+        std::string host = "";
+        short port = 0;
         ConnectionHandler handler(host, port);
         ConnectionHandler* handler_ptr = &handler;
-        if (!handler.connect()) {
-            std::cerr << "Cannot connect to " << host << ":" << port << std::endl;
-            return 1;
-        }
-        std::cout<<"connected to server"<<std::endl;
+
         mybooks= new Books();
 
         std::mutex mutex;

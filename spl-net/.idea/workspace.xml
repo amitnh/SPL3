@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b661f945-c916-4a76-9ec4-3fcb8be627a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +166,7 @@
       <workItem from="1578906310780" duration="7878000" />
       <workItem from="1578915165393" duration="18505000" />
       <workItem from="1579171428117" duration="1179000" />
-      <workItem from="1579255783584" duration="10596000" />
+      <workItem from="1579255783584" duration="11311000" />
     </task>
     <task id="LOCAL-00001" summary="1st">
       <created>1578415564167</created>
@@ -364,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579269339624</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="ihli bihli">
+      <created>1579270132221</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1579270132221</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +400,8 @@
     <MESSAGE value="Decode small adjs" />
     <MESSAGE value="Decode small adjs check" />
     <MESSAGE value="ENc Dec Debuggig complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="ENc Dec Debuggig complete" />
+    <MESSAGE value="ihli bihli" />
+    <option name="LAST_COMMIT_MESSAGE" value="ihli bihli" />
   </component>
   <component name="WindowStateProjectService">
     <state x="588" y="214" width="800" height="677" key="#Project_Structure" timestamp="1578417304713">
@@ -416,10 +424,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="541" y="310" width="894" height="484" key="#org.jetbrains.debugger.memory.view.InstancesWindow/67.27.1853.1053@67.27.1853.1053" timestamp="1579093805931" />
-    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2" timestamp="1579269338682">
+    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2" timestamp="1579270131946">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579269338682" />
+    <state x="495" y="149" width="987" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579270131946" />
     <state x="776" y="249" width="424" height="484" key="FileChooserDialogImpl" timestamp="1579006053685">
       <screen x="67" y="27" width="1853" height="930" />
     </state>
@@ -464,10 +472,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="499" height="446" key="SwitcherDM/67.27.1853.1053@67.27.1853.1053" timestamp="1578853432231" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579269342674">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579270135288">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579269342674" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579270135288" />
     <state width="926" height="527" key="XDebugger.FullValuePopup" timestamp="1579094651275">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
