@@ -115,9 +115,6 @@ public class MessageEncDecImp implements MessageEncoderDecoder, Supplier {
                 break;
             case "CONNECTED":
                 str+= "accept-version:" + message.getHeaders()[0];
-                str+= "\nhost:" + message.getHeaders()[1];
-                str+= "\nlogin:" + message.getHeaders()[2];
-                str+= "\npasscode:" + message.getHeaders()[3];
                 break;
             case "ERRORfrm":
                 if(message.getHeaders()[0]!="")

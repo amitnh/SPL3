@@ -12,11 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107e0c44-c664-4073-bdc1-909920ffe995" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../spl-net/target/classes/bgu/spl/net/api/StompMessagingProtocolImp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/STOMP/Keyboard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/STOMP/Keyboard.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spl-net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spl-net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spl-net/src/main/java/bgu/spl/net/api/StompMessagingProtocolImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spl-net/src/main/java/bgu/spl/net/api/StompMessagingProtocolImp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +129,7 @@
       <workItem from="1579178705549" duration="1194000" />
       <workItem from="1579179936661" duration="673000" />
       <workItem from="1579186073129" duration="4200000" />
-      <workItem from="1579255755279" duration="11186000" />
+      <workItem from="1579255755279" duration="11449000" />
     </task>
     <task id="LOCAL-00001" summary="1.1st">
       <created>1578415582395</created>
@@ -260,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579266166420</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="bugssss">
+      <created>1579267181960</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1579267181960</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,9 +298,9 @@
     <MESSAGE value="protocol done with no debugging" />
     <MESSAGE value="send frame" />
     <MESSAGE value="BOOK* * * * * * *" />
-    <MESSAGE value="bugssss" />
     <MESSAGE value="bugssss 15:02 friday" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugssss 15:02 friday" />
+    <MESSAGE value="bugssss" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugssss" />
   </component>
   <component name="WindowStateProjectService">
     <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579257649900">
@@ -311,10 +315,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="801" y="271" width="465" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1579261573219" />
-    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2" timestamp="1579266165472">
+    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2" timestamp="1579267180772">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579266165472" />
+    <state x="491" y="149" width="994" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579267180772" />
     <state x="167" y="125" width="1653" height="855" key="DiffContextDialog" timestamp="1579265315124">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -323,22 +327,22 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1579256875007" />
-    <state width="1807" height="221" key="GridCell.Tab.0.bottom" timestamp="1579266942005">
+    <state width="1807" height="221" key="GridCell.Tab.0.bottom" timestamp="1579267534769">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="221" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579266942005" />
-    <state width="1807" height="221" key="GridCell.Tab.0.center" timestamp="1579266942005">
+    <state width="1807" height="221" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579267534769" />
+    <state width="1807" height="221" key="GridCell.Tab.0.center" timestamp="1579267534768">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="221" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579266942005" />
-    <state width="1807" height="221" key="GridCell.Tab.0.left" timestamp="1579266942005">
+    <state width="1807" height="221" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579267534768" />
+    <state width="1807" height="221" key="GridCell.Tab.0.left" timestamp="1579267534767">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="221" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579266942005" />
-    <state width="1807" height="221" key="GridCell.Tab.0.right" timestamp="1579266942005">
+    <state width="1807" height="221" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579267534767" />
+    <state width="1807" height="221" key="GridCell.Tab.0.right" timestamp="1579267534769">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="221" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579266942005" />
+    <state width="1807" height="221" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579267534769" />
     <state x="242" y="116" width="1482" height="872" key="MergeDialog" timestamp="1579182563148">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -347,10 +351,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="698" y="270" width="580" height="564" key="MultipleFileMergeDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579255804493" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579267166844">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579267184145">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579267166844" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579267184145" />
     <state x="761" y="472" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579255797338">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
