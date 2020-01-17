@@ -54,7 +54,6 @@ void Books::removeAskedBook(Book* book){
             booksiAskedFor.erase(booksiAskedFor.begin()+i);
             i+=1;
         }
-    booksiAskedFor.push_back(book);
 }
 
 vector<Book*> &Books::getBooksiAskedFor(){
@@ -104,4 +103,8 @@ bool Book::isAvailable2() const {
 
 Book::Book(string name, string lender, string genre, bool isAvailable):name{name},lender{lender},genre{genre},isAvailable{isAvailable} {
 
+}
+
+bool Book::isAvailable3() const {
+    return isAvailable;
 }

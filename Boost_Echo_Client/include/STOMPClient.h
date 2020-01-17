@@ -9,10 +9,10 @@
 
 class STOMPClient {
 public:
-int main(int argc, char *argv[]);
-static std::string getUntilDelimiter(char del);
-
+    int main(int argc, char *argv[]);
+    static std::string getUntilDelimiter(char del);
     static void setDisconnectFlag(int disconnectFlag);
+
 };
 
 

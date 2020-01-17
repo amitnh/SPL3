@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b661f945-c916-4a76-9ec4-3fcb8be627a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/include/Books.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/include/Books.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/Books.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/Books.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/Keyboard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/Keyboard.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/STOMPClient.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Boost_Echo_Client/src/STOMP/STOMPClient.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/MessageEncDecImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/StompMessagingProtocolImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/api/StompMessagingProtocolImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bgu/spl/net/frames/SEND.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bgu/spl/net/frames/MESSAGE.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +172,7 @@
       <workItem from="1578906310780" duration="7878000" />
       <workItem from="1578915165393" duration="18505000" />
       <workItem from="1579171428117" duration="1179000" />
-      <workItem from="1579255783584" duration="2879000" />
+      <workItem from="1579255783584" duration="6299000" />
     </task>
     <task id="LOCAL-00001" summary="1st">
       <created>1578415564167</created>
@@ -415,22 +416,22 @@
       <screen x="67" y="27" width="1853" height="930" />
     </state>
     <state x="776" y="249" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.930@67.27.1853.930" timestamp="1579006053685" />
-    <state width="1807" height="274" key="GridCell.Tab.0.bottom" timestamp="1579259427839">
+    <state width="1807" height="212" key="GridCell.Tab.0.bottom" timestamp="1579265819487">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="274" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579259427839" />
-    <state width="1807" height="274" key="GridCell.Tab.0.center" timestamp="1579259427839">
+    <state width="1807" height="212" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579265819487" />
+    <state width="1807" height="212" key="GridCell.Tab.0.center" timestamp="1579265819487">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="274" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579259427839" />
-    <state width="1807" height="274" key="GridCell.Tab.0.left" timestamp="1579259427839">
+    <state width="1807" height="212" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579265819487" />
+    <state width="1807" height="212" key="GridCell.Tab.0.left" timestamp="1579265819487">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="274" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579259427839" />
-    <state width="1807" height="274" key="GridCell.Tab.0.right" timestamp="1579259427839">
+    <state width="1807" height="212" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579265819487" />
+    <state width="1807" height="212" key="GridCell.Tab.0.right" timestamp="1579265819487">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="274" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579259427839" />
+    <state width="1807" height="212" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579265819487" />
     <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1579191474066">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

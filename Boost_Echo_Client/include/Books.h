@@ -23,6 +23,8 @@ public:
     void setGenre(const string &genre);
     bool isAvailable2() const;
 
+    bool isAvailable3() const;
+
 private:
     string name, lender , genre;
     bool isAvailable;

@@ -17,152 +17,128 @@
 using namespace std;
 Books* mybooks;
 string answer;
-int disconnectFlag=0;
+int disconnectFlag=-1;
 int main(int argc, char **argv) {
-
-    bool terminate = false;
-    if (argc < 3) {
-        std::cerr << "Usage: " << argv[0] << " host port" << std::endl << std::endl;
-        return -1;
-    }
-    std::string host = argv[1];
-    short port = atoi(argv[2]);
-
-    ConnectionHandler handler(host, port);
-    ConnectionHandler* handler_ptr = &handler;
-    if (!handler.connect()) {
-        std::cerr << "Cannot connect to " << host << ":" << port << std::endl;
-        return 1;
-    }
-    std::cout<<"connected to server"<<std::endl;
-    mybooks= new Books();
-
-
-//    Book* a  = new Book("a","a","a",true);
-//   mybooks->addBook(a);
-//  Book *book1 = new Book("book1","tal","a",true);
-//   mybooks->addBook(book1);
-//    vector<Book*> b = mybooks->getBooksByGenre("a")->getAllBooks();
-
-
-
-
-
-
-    std::mutex mutex;
-    Keyboard task1(handler_ptr,mybooks, mutex);
-    std::thread th1(&Keyboard::process, &task1);
-    string stompframe;
-
-    while(!terminate)
-    {
-        stompframe="";
-        answer = "";
-        if (!handler.getLine(answer)) {
-            std::cout << "Disconnected. Exiting...\n" << std::endl;
-            break;
+    bool closeAll=false;
+    while (!closeAll) {
+        bool terminate= false;
+        if (argc < 3) {
+            std::cerr << "Usage: " << argv[0] << " host port" << std::endl << std::endl;
+            return -1;
         }
+        std::string host = argv[1];
+        short port = atoi(argv[2]);
 
-        cout<<"Server:\n"+answer<<endl;//TODO delete..
-        string command = STOMPClient::getUntilDelimiter('\n');
-        if (command=="RECEIPT")
-        {
-            STOMPClient::getUntilDelimiter(':'); // to the trash, its the header name
-            string receiptId = STOMPClient::getUntilDelimiter('\n');
-            //if (to_string(disconnectFlag)==receiptId)
-                //terminate=true;// TODO: close keyboard and check the receipt id
+        ConnectionHandler handler(host, port);
+        ConnectionHandler* handler_ptr = &handler;
+        if (!handler.connect()) {
+            std::cerr << "Cannot connect to " << host << ":" << port << std::endl;
+            return 1;
         }
-        else if (command=="MESSAGE") {
-            STOMPClient::getUntilDelimiter(':'); // to the trash, its the header name
-            string genre = STOMPClient::getUntilDelimiter('\n');
-            STOMPClient::getUntilDelimiter('\n');
-            string body = answer;
-            if (body == "book status") {
-                Books* toSend = mybooks->getBooksByGenre(genre);
-                if (!toSend->getAllBooks().empty()) {
-                    stompframe = "SEND"
-                                 "\ndestination:" + genre +
-                                 "\n"
-                                 + mybooks->getMyname() + ":";
-                    for (Book* b:toSend->getAllBooks()) {
-                        stompframe += b->getName() + ",";
-                    }
-                    stompframe.substr(0, stompframe.length() - 1); //removes the last comma TODO: check the sizes
-                    stompframe += "\n\0";
-                }
+        std::cout<<"connected to server"<<std::endl;
+        mybooks= new Books();
 
-            } else { // no book status
-                string user = STOMPClient::getUntilDelimiter(' ');
-                if (answer.substr(0, 4) == "wish")//  "wish to borrow {book name}")
-                {
-                    STOMPClient::getUntilDelimiter(' ');// wish
-                    STOMPClient::getUntilDelimiter(' ');// to
-                    STOMPClient::getUntilDelimiter(' ');// borrow
-                    string bookName = answer;
-                    //if i have it SEND {username} has {book name}
-                    for (Book* b:mybooks->getBooksByGenre(genre)->getAllBooks()) {
-                        if (b->getName() == bookName) {
-                            stompframe = "SEND"
-                                         "\ndestination:" + genre +
-                                         "\n"
-                                         + mybooks->getMyname() + " has " + bookName;
-                        }
-                    }
+        std::mutex mutex;
+        Keyboard task1(handler_ptr,mybooks, mutex , terminate);
+        std::thread th1(&Keyboard::process, &task1);
+        string stompframe;
 
-                }
-                else if (answer.substr(0, 4) == "Retu"){// “Returning {book name} to {book lender}”
-                    string bookName =  STOMPClient::getUntilDelimiter(' '); // {book name}
-                    STOMPClient::getUntilDelimiter(' ');// to
-                    string lender =  STOMPClient::getUntilDelimiter(' '); // {book lender}
-                    if(lender==mybooks->getMyname())
-                    {
-                        for (Book* b:mybooks->getAllBooks())
-                        {
-                            if (b->getName()==bookName)
-                                b->setIsAvailable(true);
-                        }
-
-                    }
-
-                }
-                else if (answer.substr(0, 3) == "has")// "has {book name}-some else has it
-                {
-                    STOMPClient::getUntilDelimiter(' ');// has
-                    string bookName = answer; // {book name}
-                    for (Book* b:mybooks->getBooksiAskedFor()) {
-                        if (b->getName() == bookName) {
-                            //SEND Taking {book name} from {book owner username}
-                            stompframe = "SEND"
-                                         "\ndestination:" + genre +
-                                         "\n\nTaking " + bookName + " from " + user;
-                            mybooks->addBook(new Book(bookName, user, genre, true));
-                            mybooks->removeAskedBook(b);
-                            break;
-                        }
-                    }
-                } else { //Taking {book name} from {book owner username}
-                    string bookName = STOMPClient::getUntilDelimiter(' ');//  {book name}
-                    STOMPClient::getUntilDelimiter(' ');// from
-                    string owner = STOMPClient::getUntilDelimiter(' ');//  {book owner}
-                    if(mybooks->getMyname()==owner)
-                    {
-                            mybooks->getBook(bookName)->setIsAvailable(false);
-                    }
-                }
+        while (!terminate) {
+            stompframe = "";
+            answer = "";
+            if (!handler.getLine(answer)) {
+                std::cout << "Disconnected. Exiting...\n" << std::endl;
+                break;
             }
 
+            cout << "Server:\n" + answer << endl;//TODO delete..
+            string command = STOMPClient::getUntilDelimiter('\n');
+            if (command == "RECEIPT") {
+                STOMPClient::getUntilDelimiter(':'); // to the trash, its the header name
+                string receiptId = STOMPClient::getUntilDelimiter('\n');
+                if (to_string(disconnectFlag) == receiptId)
+                    terminate = true;// TODO: close keyboard and check the receipt id
+            } else if (command == "MESSAGE") {
+                STOMPClient::getUntilDelimiter(':'); // to the trash, its the header name
+                string genre = STOMPClient::getUntilDelimiter('\n');
+                STOMPClient::getUntilDelimiter('\n');
+                string body = answer;
+                if (body == "book status") {
+                    Books *toSend = mybooks->getBooksByGenre(genre);
+                    if (!toSend->getAllBooks().empty()) {
+                        stompframe = "SEND"
+                                     "\ndestination:" + genre +
+                                     "\n"
+                                     + mybooks->getMyname() + ":";
+                        for (Book *b:toSend->getAllBooks()) {
+                            stompframe += b->getName() + ",";
+                        }
+                        stompframe.substr(0, stompframe.length() - 1); //removes the last comma TODO: check the sizes
+                        stompframe += "\n\0";
+                    }
 
-        }
-        else if (command=="CONNECTED")
-        {
-            cout<<"Login successful"<<endl;
-        }
+                } else { // no book status
+                    string user = STOMPClient::getUntilDelimiter(' ');
+                    if (answer.substr(0, 4) == "wish")//  "wish to borrow {book name}")
+                    {
+                        STOMPClient::getUntilDelimiter(' ');// wish
+                        STOMPClient::getUntilDelimiter(' ');// to
+                        STOMPClient::getUntilDelimiter(' ');// borrow
+                        string bookName = answer;
+                        //if i have it SEND {username} has {book name}
+                        for (Book *b:mybooks->getBooksByGenre(genre)->getAllBooks()) {
+                            if ((b->getName() == bookName) && (b->isAvailable1())) {
+                                stompframe = "SEND"
+                                             "\ndestination:" + genre +
+                                             "\n"
+                                             + mybooks->getMyname() + " has " + bookName;
+                            }
+                        }
 
-        if(stompframe!="") //sending the frame to the Server
-        {
-            mutex.lock();
-            handler.sendLine(stompframe);
-            mutex.unlock();
+                    } else if (user == "Returning") {// “Returning {book name} to {book lender}”
+                        string bookName = STOMPClient::getUntilDelimiter(' '); // {book name}
+                        STOMPClient::getUntilDelimiter(' ');// to
+                        string lender = STOMPClient::getUntilDelimiter(' '); // {book lender}
+                        if (lender == mybooks->getMyname()) {
+                            mybooks->getBook(bookName)->setIsAvailable(true);
+                        }
+
+                    } else if (answer.substr(0, 3) == "has")// "has {book name}-some else has it
+                    {
+                        STOMPClient::getUntilDelimiter(' ');// has
+                        string bookName = answer; // {book name}
+                        for (Book *b:mybooks->getBooksiAskedFor()) {
+                            if (b->getName() == bookName) {
+                                //SEND Taking {book name} from {book owner username}
+                                stompframe = "SEND"
+                                             "\ndestination:" + genre +
+                                             "\n\nTaking " + bookName + " from " + user;
+                                mybooks->addBook(new Book(bookName, user, genre, true));
+                                mybooks->removeAskedBook(b);
+                                break;
+                            }
+                        }
+                    } else { //Taking {book name} from {book owner username}
+                        string bookName = STOMPClient::getUntilDelimiter(' ');//  {book name}
+                        STOMPClient::getUntilDelimiter(' ');// from
+                        string owner = STOMPClient::getUntilDelimiter(' ');//  {book owner}
+                        if (mybooks->getMyname() == owner) {
+                            mybooks->getBook(bookName)->setIsAvailable(false);
+                        }
+                    }
+                }
+
+
+            } else if (command == "CONNECTED") {
+                cout << "Login successful" << endl;
+            }
+
+            if (stompframe != "") //sending the frame to the Server
+            {
+                mutex.lock();
+                handler.sendLine(stompframe);
+                mutex.unlock();
+            }
         }
     }
 

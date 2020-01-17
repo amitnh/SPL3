@@ -7,6 +7,8 @@ import bgu.spl.net.srv.DataBase;
 import bgu.spl.net.srv.User;
 
 import javax.xml.crypto.Data;
+import java.util.List;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.function.Supplier;
 
 public class StompMessagingProtocolImp implements StompMessagingProtocol, Supplier {
@@ -47,7 +49,13 @@ public class StompMessagingProtocolImp implements StompMessagingProtocol, Suppli
         {
             new RECEIPT(user.getConnectionId(),frame.getHeaders(),"");
             user.setActive(false);
-            terminate();
+            user.getSubscriptionMap().clear();
+            DataBase.getInstance().getUsers().remove(user);
+            for (ConcurrentLinkedQueue t:DataBase.getInstance().getTopics().values())
+            {
+                t.remove(user);
+            }
+//            terminate();
         }
     }
 
